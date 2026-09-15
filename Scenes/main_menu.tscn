@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://wwmqlxwiha0o"]
+
+[ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="1_1ehe0"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/black-goth-font/BlackgothRegular-xRg40.otf" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="3_1ehe0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al4r6"]
+atlas = ExtResource("3_1ehe0")
+region = Rect2(113, 94, 80, 37)
+
+[node name="Main menu" type="Control" unique_id=471841265]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=472646663]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ehe0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkOverLay" type="ColorRect" parent="." unique_id=1258848361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3137255)
+
+[node name="MenuPanel" type="Panel" parent="." unique_id=311131598]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49
+anchor_top = 0.120000005
+anchor_right = 0.49
+anchor_bottom = 0.120000005
+offset_left = -162.47998
+offset_top = 0.23999786
+offset_right = 163.52002
+offset_bottom = 484.24
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Newgamebutton" type="Button" parent="MenuPanel" unique_id=374904299]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.22900002
+anchor_right = 0.503
+anchor_bottom = 0.22900002
+offset_left = -148.97801
+offset_top = -29.836006
+offset_right = 149.02199
+offset_bottom = 35.163994
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 26
+text = "New Game"
+
+[node name="ButtonBackground" type="NinePatchRect" parent="MenuPanel/Newgamebutton" unique_id=100925050]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 58.0
+offset_bottom = 43.0
+texture = SubResource("AtlasTexture_al4r6")
+region_rect = Rect2(128.00961, 95.92824, 63.445007, 27.990448)
+
+[node name="LoadGameButton" type="Button" parent="MenuPanel" unique_id=978773387]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.279
+anchor_right = 0.5
+anchor_bottom = 0.279
+offset_left = -148.0
+offset_top = 20.96399
+offset_right = 150.0
+offset_bottom = 80.96399
+text = "LOAD GAME"
+
+[node name="QuitButton" type="Button" parent="MenuPanel" unique_id=863832854]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.279
+anchor_right = 0.5
+anchor_bottom = 0.279
+offset_left = -147.0
+offset_top = 248.96399
+offset_right = 151.0
+offset_bottom = 308.964
+text = "QUIT"
+
+[node name="CreditsButton" type="Button" parent="MenuPanel" unique_id=2143023080]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.279
+anchor_right = 0.5
+anchor_bottom = 0.279
+offset_left = -147.0
+offset_top = 169.96399
+offset_right = 151.0
+offset_bottom = 229.96399
+text = "CREDITS
+"
+
+[node name="OptionsButton" type="Button" parent="MenuPanel" unique_id=813216076]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.279
+anchor_right = 0.5
+anchor_bottom = 0.279
+offset_left = -147.0
+offset_top = 93.96399
+offset_right = 151.0
+offset_bottom = 153.96399
+text = "OPTIONS"
+
+[node name="Game Title" type="Label" parent="." unique_id=1614465687]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48800004
+anchor_top = 0.095000006
+anchor_right = 0.48800004
+anchor_bottom = 0.095000006
+offset_left = -52.176025
+offset_top = -13.560005
+offset_right = 52.823975
+offset_bottom = 13.439995
+text = "Magic-Kobold"
+horizontal_alignment = 1

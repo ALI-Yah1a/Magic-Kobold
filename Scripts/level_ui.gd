@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var dash_bar: TextureProgressBar = $HUD/PlayerStats/VitalsAndStats/DashBar
 @onready var coins_label: Label = $HUD/PlayerStats/VitalsAndStats/CoinsTracker/CoinsLabel
 @onready var monsters_label: Label = $HUD/PlayerStats/VitalsAndStats/MonstersTracker/MonstersLabel
+@onready var pause_menu: Control = $PauseMenu
 
 @export var player: Player 
 @export var required_coins: int = 50
@@ -20,9 +21,10 @@ func _ready():
 		dash_bar.max_value = 100
 		dash_bar.value = dash_bar.max_value
 		player.dash_started.connect(animate_dash_bar)
-		
+	pause_menu.visible = false
 	update_coins_ui()
 	update_monsters_ui()
+	
 
 func update_health(new_health):
 	health_bar.value = new_health
@@ -51,3 +53,18 @@ func update_monsters_ui():
 func check_level_completion():
 	if current_coins >= required_coins and current_monsters >= required_monsters:
 		print("Level Complete!")
+func _input(event):
+	if event.is_action_pressed("pause"):
+		toggle_pause()
+		
+func toggle_pause():
+	var new_pause_state = not get_tree().paused
+	get_tree().paused = new_pause_state
+	pause_menu.visible = new_pause_state
+	
+func _on_resume_button_pressed():
+	toggle_pause()
+
+func _on_main_menu_button_pressed():
+	get_tree().paused = false 
+	get_tree().change_scene_to_file("")

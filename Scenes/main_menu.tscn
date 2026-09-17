@@ -1,0 +1,503 @@
+[gd_scene format=3 uid="uid://wwmqlxwiha0o"]
+
+[ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="1_1ehe0"]
+[ext_resource type="Shader" uid="uid://dmk2kb0ms38wl" path="res://Scenes/scroll.gdshader" id="1_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="2_1ehe0"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/black-goth-font/BlackgothRegular-xRg40.otf" id="2_48xlc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ehe0"]
+shader = ExtResource("1_ce3w2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg1du"]
+atlas = ExtResource("2_1ehe0")
+region = Rect2(0, 0, 95.27069, 95.15446)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.16078432, 0.29411766, 0.41960785, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8392157, 0.65882355, 0.30980393, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.2509804)
+anti_aliasing_size = 0.995
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0.11764706, 0.20784314, 0.3019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.65882355, 0.45882353, 0.18431373, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq62s"]
+bg_color = Color(0.23137255, 0.3882353, 0.52156866, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9490196, 0.8235294, 0.47843137, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.5019608)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al4r6"]
+atlas = ExtResource("2_1ehe0")
+region = Rect2(95.81601, 0, 96.18399, 95.72667)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_636m2"]
+atlas = ExtResource("2_1ehe0")
+region = Rect2(95.89868, 0, 96.10132, 95.456924)
+
+[node name="Main menu" type="Control" unique_id=471841265]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=472646663]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_1ehe0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ehe0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkOverLay" type="ColorRect" parent="." unique_id=1258848361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7490196)
+
+[node name="MenuPanel" type="Panel" parent="." unique_id=311131598]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49
+anchor_top = 0.120000005
+anchor_right = 0.49
+anchor_bottom = 0.120000005
+offset_left = -491.47998
+offset_top = 0.23999786
+offset_right = -165.47998
+offset_bottom = 484.24
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MenuPanel" unique_id=2139080189]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.1196319
+anchor_top = -0.11776859
+anchor_right = 1.1104294
+anchor_bottom = 1.105372
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_bg1du")
+metadata/_edit_use_anchors_ = true
+
+[node name="Newgamebutton" type="Button" parent="MenuPanel" unique_id=374904299]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.22900002
+anchor_right = 0.503
+anchor_bottom = 0.22900002
+offset_left = -126.97801
+offset_top = 30.163994
+offset_right = 123.02199
+offset_bottom = 80.163994
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "NEW GAME"
+
+[node name="OptionsButton" type="Button" parent="MenuPanel" unique_id=978773387]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.275
+anchor_right = 0.5
+anchor_bottom = 0.279
+offset_left = -126.0
+offset_top = 71.899994
+offset_right = 124.0
+offset_bottom = 119.96399
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "OPTIONS"
+
+[node name="QuitButton" type="Button" parent="MenuPanel" unique_id=863832854]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.279
+anchor_right = 0.5
+anchor_bottom = 0.279
+offset_left = -125.0
+offset_top = 264.964
+offset_right = 125.0
+offset_bottom = 314.964
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "QUIT"
+
+[node name="CreditsButton" type="Button" parent="MenuPanel" unique_id=2143023080]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.279
+anchor_right = 0.5
+anchor_bottom = 0.279
+offset_left = -126.0
+offset_top = 199.96399
+offset_right = 124.0
+offset_bottom = 249.96399
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "CREDITS
+"
+
+[node name="HowToPlayButton" type="Button" parent="MenuPanel" unique_id=813216076]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.279
+anchor_right = 0.5
+anchor_bottom = 0.279
+offset_left = -126.0
+offset_top = 134.96399
+offset_right = 124.0
+offset_bottom = 184.96399
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "HOW TO PLAY"
+
+[node name="Game Title" type="Label" parent="MenuPanel" unique_id=1614465687]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.508
+anchor_top = 0.08400001
+anchor_right = 0.508
+anchor_bottom = 0.08400001
+offset_left = -110.608
+offset_top = 27.343998
+offset_right = 106.392
+offset_bottom = 72.343994
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 40
+text = "MAGIC-KOBOLD"
+horizontal_alignment = 1
+
+[node name="Decorations" type="Node" parent="MenuPanel" unique_id=461182235]
+
+[node name="panel border5" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=5697407]
+z_index = 2
+texture_filter = 1
+offset_left = 344.97858
+offset_top = 114.26515
+offset_right = 556.61707
+offset_bottom = 128.9654
+rotation = 3.143771
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(199, 176.40009, 82, 3.5999146)
+
+[node name="panel border6" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=492516883]
+z_index = 1
+texture_filter = 1
+offset_left = 85.0
+offset_top = 137.0
+offset_right = 394.03467
+offset_bottom = 200.33394
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(197, 141.5886, 86, 8.411407)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border7" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=1353325265]
+z_index = 1
+texture_filter = 1
+offset_left = 359.00015
+offset_top = 153.0
+offset_right = 383.7449
+offset_bottom = 182.11046
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(105, 232, 14, 17)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border8" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=465046398]
+z_index = 1
+texture_filter = 1
+offset_left = 96.00015
+offset_top = 153.0
+offset_right = 120.7449
+offset_bottom = 182.11046
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(105, 232, 14, 17)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border9" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=1730777953]
+z_index = 1
+texture_filter = 1
+offset_left = 84.0
+offset_top = 210.0
+offset_right = 106.86041
+offset_bottom = 233.17973
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(76, 236, 7, 8)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border10" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=51808210]
+z_index = 1
+texture_filter = 1
+offset_left = 368.00003
+offset_top = 212.0
+offset_right = 390.86044
+offset_bottom = 235.17973
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(76, 236, 7, 8)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border15" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=347706444]
+z_index = 1
+texture_filter = 1
+offset_left = 708.9976
+offset_top = 151.3946
+offset_right = 726.95044
+offset_bottom = 167.45175
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(41, 266, 12, 13)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border16" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=1316863776]
+z_index = 1
+texture_filter = 1
+offset_left = 922.9976
+offset_top = 151.39459
+offset_right = 940.95044
+offset_bottom = 167.45174
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(41, 266, 12, 13)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border13" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=471726449]
+z_index = 1
+texture_filter = 1
+offset_left = 367.00006
+offset_top = 495.00003
+offset_right = 389.86047
+offset_bottom = 518.1798
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(76, 236, 7, 8)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border14" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=1286667159]
+z_index = 1
+texture_filter = 1
+offset_left = 84.00009
+offset_top = 495.0
+offset_right = 106.860504
+offset_bottom = 518.1798
+rotation = -0.0002240357
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(76, 236, 7, 8)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border11" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=302446499]
+z_index = 1
+texture_filter = 1
+offset_left = 387.0
+offset_top = 240.0
+offset_right = 636.3285
+offset_bottom = 252.1322
+rotation = 1.5702358
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(295, 176, 82, 4)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="panel border12" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=464668272]
+z_index = 1
+texture_filter = 1
+offset_left = 101.99998
+offset_top = 239.0
+offset_right = 351.3284
+offset_bottom = 251.1322
+rotation = 1.5702358
+texture = ExtResource("2_1ehe0")
+region_rect = Rect2(295, 176, 82, 4)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel/Decorations" unique_id=1293997705]
+texture_filter = 1
+offset_left = 662.0
+offset_top = 123.0
+offset_right = 991.0
+offset_bottom = 500.0
+texture = SubResource("AtlasTexture_al4r6")
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel" unique_id=1286011406]
+z_index = 1
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_636m2")
+
+[node name="Node" type="Node" parent="." unique_id=919263921]
+
+[node name="Label" type="Label" parent="Node" unique_id=962214554]
+z_index = 2
+texture_filter = 1
+offset_left = 693.0
+offset_top = 206.0
+offset_right = 960.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(0.2901961, 0.18039216, 0.105882354, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.08627451, 0.050980393, 1)
+theme_override_colors/font_outline_color = Color(0.84705883, 0.72156864, 0.47058824, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 18
+text = "A young kobold discovers a mysterious magic hidden deep within an ancient forest.
+Determined to uncover its secrets, he begins a journey through forgotten ruins and dangerous lands.
+Along the way, he will face strange creatures, uncover lost secrets, and discover his true destiny."
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Node" unique_id=24873009]
+texture_filter = 1
+offset_left = 741.0
+offset_top = 149.0
+offset_right = 909.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0.41960785, 0.24705882, 0.11764706, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.08627451, 0.050980393, 1)
+theme_override_colors/font_outline_color = Color(0.84705883, 0.72156864, 0.47058824, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 25
+text = "THE MAGIC KOBOLD"
+
+[node name="Label3" type="Label" parent="Node" unique_id=771862566]
+texture_filter = 1
+offset_left = 693.0
+offset_top = 435.0
+offset_right = 1052.0
+offset_bottom = 484.0
+theme_override_colors/font_color = Color(0.47843137, 0.2901961, 0.14509805, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.08627451, 0.050980393, 1)
+theme_override_colors/font_outline_color = Color(0.84705883, 0.72156864, 0.47058824, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 18
+text = "His adventure has only just begun..."

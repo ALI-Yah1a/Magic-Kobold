@@ -19,6 +19,7 @@ var can_dash = true
 var max_health = 100
 var current_health = 100
 signal health_changed(new_health) 
+signal dash_started(duration)
 
 func _ready():
 	current_health = max_health
@@ -99,6 +100,7 @@ func start_dash():
 	is_dashing = true
 	can_dash = false
 	animated_sprite_2d.play("dash")
+	dash_started.emit(DASH_COOLDOWN)
 	get_tree().create_timer(DASH_COOLDOWN).timeout.connect(func(): can_dash = true)
 
 func attack():

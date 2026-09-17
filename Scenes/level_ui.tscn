@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://d0fxmbitr1i46"]
+
+[ext_resource type="Script" uid="uid://dwn8kl34dvd8j" path="res://Scripts/level_ui.gd" id="1_4mllq"]
+[ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="1_gw16p"]
+[ext_resource type="Texture2D" uid="uid://ov25b5sjlx5j" path="res://Assets/Player/Player Face.png" id="3_xdjqv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sena"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(305, 17, 62, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esyny"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(197, 135, 86, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mllq"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(295, 176, 82, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imobx"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(197, 142, 86, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4a2s"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(296, 144, 82, 4)
+
+[node name="LevelUI" type="CanvasLayer" unique_id=824301517]
+script = ExtResource("1_4mllq")
+
+[node name="HUD" type="Control" parent="." unique_id=2080063570]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerStats" type="HBoxContainer" parent="HUD" unique_id=332531254]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PortraitFrame" type="TextureRect" parent="HUD/PlayerStats" unique_id=1928012553]
+layout_mode = 2
+texture = SubResource("AtlasTexture_7sena")
+
+[node name="Face" type="TextureRect" parent="HUD/PlayerStats/PortraitFrame" unique_id=762759974]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 55.0
+offset_bottom = 58.0
+texture = ExtResource("3_xdjqv")
+expand_mode = 1
+
+[node name="VitalsAndStats" type="VBoxContainer" parent="HUD/PlayerStats" unique_id=547180024]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HealthBar" type="TextureProgressBar" parent="HUD/PlayerStats/VitalsAndStats" unique_id=198482770]
+layout_mode = 2
+value = 100.0
+texture_under = SubResource("AtlasTexture_esyny")
+texture_progress = SubResource("AtlasTexture_4mllq")
+texture_progress_offset = Vector2(2, 9)
+
+[node name="DashBar" type="TextureProgressBar" parent="HUD/PlayerStats/VitalsAndStats" unique_id=1096540736]
+layout_mode = 2
+step = 0.01
+value = 100.0
+texture_under = SubResource("AtlasTexture_imobx")
+texture_progress = SubResource("AtlasTexture_u4a2s")
+texture_progress_offset = Vector2(2, 2)
+
+[node name="CoinsTracker" type="HBoxContainer" parent="HUD/PlayerStats/VitalsAndStats" unique_id=2036885109]
+layout_mode = 2
+
+[node name="CoinsIcon" type="TextureRect" parent="HUD/PlayerStats/VitalsAndStats/CoinsTracker" unique_id=2052974953]
+layout_mode = 2
+
+[node name="CoinsLabel" type="Label" parent="HUD/PlayerStats/VitalsAndStats/CoinsTracker" unique_id=295272532]
+layout_mode = 2
+
+[node name="MonstersTracker" type="HBoxContainer" parent="HUD/PlayerStats/VitalsAndStats" unique_id=421357327]
+layout_mode = 2
+
+[node name="MonstersIcon" type="TextureRect" parent="HUD/PlayerStats/VitalsAndStats/MonstersTracker" unique_id=209465727]
+layout_mode = 2
+
+[node name="MonstersLabel" type="Label" parent="HUD/PlayerStats/VitalsAndStats/MonstersTracker" unique_id=1420970729]
+layout_mode = 2

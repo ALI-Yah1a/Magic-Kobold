@@ -7,7 +7,7 @@ class_name Player
 const SPEED = 170.0
 const JUMP_VELOCITY = -380.0
 const DASH_SPEED = 250.0
-const DASH_COOLDOWN = 1.5 
+const DASH_COOLDOWN = 2
 
 var is_attacking = false
 var can_attack = true
@@ -27,7 +27,8 @@ func _ready():
 func _input(event):
 	if is_hurt:
 		return
-	
+	if event.is_action_pressed("jump"): 
+		take_damage(15)
 	if event.is_action_pressed("jump") and is_on_floor():
 		is_dashing = false
 		velocity.y = JUMP_VELOCITY

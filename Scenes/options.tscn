@@ -8,7 +8,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_al4r6"]
 atlas = ExtResource("2_kftxf")
-region = Rect2(0, 0, 97.32669, 96.08667)
+region = Rect2(0, 0, 94.34971, 94.068375)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
 shader = ExtResource("3_ww8vx")
@@ -45,8 +45,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -411.0
 offset_top = -423.5
-offset_right = 411.0
-offset_bottom = 424.0
+offset_right = 384.0
+offset_bottom = 419.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_al4r6")

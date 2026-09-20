@@ -28,12 +28,14 @@ func _on_music_volume_slider_value_changed(value: float) -> void:
 
 
 func _on_fullscreen_button_toggled(toggled_on: bool) -> void:
-	print("FULLSCREEN BUTTON CLICKED: ", toggled_on)
+	print("BUTTON SIGNAL:", toggled_on)
 
 	if toggled_on:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		print("MODE SET TO FULLSCREEN")
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		print("MODE SET TO WINDOWED")
 
 
 func _on_sound_button_toggled(toggled_on: bool) -> void:

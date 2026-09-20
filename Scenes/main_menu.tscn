@@ -321,10 +321,10 @@ patch_margin_right = 1
 [node name="panel border9" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=1730777953]
 z_index = 1
 texture_filter = 1
-offset_left = 146.0
-offset_top = 347.0
-offset_right = 177.43251
-offset_bottom = 380.18506
+offset_left = 152.0
+offset_top = 347.00003
+offset_right = 183.43251
+offset_bottom = 380.1851
 rotation = -0.0002240357
 texture = ExtResource("2_1ehe0")
 region_rect = Rect2(76, 236, 7, 8)
@@ -335,9 +335,9 @@ patch_margin_right = 1
 [node name="panel border10" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=51808210]
 z_index = 1
 texture_filter = 1
-offset_left = 549.00006
+offset_left = 550.0
 offset_top = 352.00003
-offset_right = 580.43256
+offset_right = 581.4325
 offset_bottom = 385.1851
 rotation = -0.0002240357
 texture = ExtResource("2_1ehe0")
@@ -377,10 +377,10 @@ patch_margin_right = 1
 [node name="panel border13" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=471726449]
 z_index = 1
 texture_filter = 1
-offset_left = 552.0
-offset_top = 716.00006
-offset_right = 583.43256
-offset_bottom = 749.1851
+offset_left = 551.00006
+offset_top = 716.0
+offset_right = 582.4326
+offset_bottom = 749.18506
 rotation = -0.0002240357
 texture = ExtResource("2_1ehe0")
 region_rect = Rect2(76, 236, 7, 8)
@@ -391,9 +391,9 @@ patch_margin_right = 1
 [node name="panel border14" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=1286667159]
 z_index = 1
 texture_filter = 1
-offset_left = 147.00009
+offset_left = 152.0001
 offset_top = 711.0
-offset_right = 178.4326
+offset_right = 183.43262
 offset_bottom = 744.18506
 rotation = -0.0002240357
 texture = ExtResource("2_1ehe0")
@@ -405,10 +405,10 @@ patch_margin_right = 1
 [node name="panel border11" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=302446499]
 z_index = 1
 texture_filter = 1
-offset_left = 573.99994
-offset_top = 401.99994
-offset_right = 874.774
-offset_bottom = 418.43857
+offset_left = 575.99414
+offset_top = 391.60678
+offset_right = 887.1613
+offset_bottom = 408.0454
 rotation = 1.5702358
 texture = ExtResource("2_1ehe0")
 region_rect = Rect2(295, 176, 82, 4)
@@ -419,10 +419,10 @@ patch_margin_right = 1
 [node name="panel border12" type="NinePatchRect" parent="MenuPanel/Decorations" unique_id=464668272]
 z_index = 1
 texture_filter = 1
-offset_left = 169.99997
-offset_top = 397.0001
-offset_right = 470.77402
-offset_bottom = 413.43872
+offset_left = 174.99704
+offset_top = 391.80353
+offset_right = 486.1642
+offset_bottom = 408.24216
 rotation = 1.5702358
 texture = ExtResource("2_1ehe0")
 region_rect = Rect2(295, 176, 82, 4)
@@ -506,3 +506,4 @@ text = "His adventure has only just begun..."
 
 [connection signal="pressed" from="MenuPanel/Newgamebutton" to="." method="_on_newgamebutton_pressed"]
 [connection signal="pressed" from="MenuPanel/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MenuPanel/QuitButton" to="." method="_on_quit_button_pressed"]

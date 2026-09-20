@@ -161,7 +161,6 @@ texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_663nc")
 theme_override_font_sizes/font_size = 30
-button_pressed = true
 text = "FULLSCREEN"
 
 [node name="SoundButton" type="CheckButton" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=925230577]
@@ -185,3 +184,10 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("5_663nc")
 theme_override_font_sizes/font_size = 30
 text = "BACK"
+
+[connection signal="value_changed" from="OptionsPanel/Margins/Content/SettingsList/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="OptionsPanel/Margins/Content/SettingsList/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="toggled" from="OptionsPanel/Margins/Content/SettingsList/FullscreenButton" to="." method="_on_fullscreen_button_toggled"]
+[connection signal="toggled" from="OptionsPanel/Margins/Content/SettingsList/SoundButton" to="." method="_on_sound_button_toggled"]
+[connection signal="pressed" from="OptionsPanel/Margins/Content/SettingsList/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="OptionsPanel/Margins/Content/SettingsList/BackButton" to="." method="_on_back_button_pressed"]

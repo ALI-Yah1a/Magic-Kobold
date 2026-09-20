@@ -56,7 +56,7 @@ texture = ExtResource("1_gw16p")
 region_rect = Rect2(63, 104, 65, 19)
 modulate_color = Color(0.6649216, 0.66492164, 0.6649215, 1)
 
-[node name="LevelUI" type="CanvasLayer" unique_id=824301517]
+[node name="LevelUI" type="CanvasLayer" unique_id=824301517 groups=["UI"]]
 script = ExtResource("1_4mllq")
 
 [node name="HUD" type="Control" parent="." unique_id=2080063570]
@@ -142,7 +142,6 @@ text = "10"
 
 [node name="PauseMenu" type="Control" parent="." unique_id=1349029259]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

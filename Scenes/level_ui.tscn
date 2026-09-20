@@ -1,0 +1,309 @@
+[gd_scene format=3 uid="uid://d0fxmbitr1i46"]
+
+[ext_resource type="Script" uid="uid://dwn8kl34dvd8j" path="res://Scripts/level_ui.gd" id="1_4mllq"]
+[ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="1_gw16p"]
+[ext_resource type="Texture2D" uid="uid://bar0c6c7xuu03" path="res://Assets/UI/HUD/TileSheet.png" id="2_2qe5m"]
+[ext_resource type="Texture2D" uid="uid://ov25b5sjlx5j" path="res://Assets/Player/Player Face.png" id="3_xdjqv"]
+[ext_resource type="Texture2D" uid="uid://dk02nwwx3bd3j" path="res://Assets/Pickups/pickup.png" id="5_ao4gj"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/black-goth-font/BlackgothRegular-xRg40.otf" id="6_ao4gj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qe5m"]
+atlas = ExtResource("2_2qe5m")
+region = Rect2(128, 131, 64, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esyny"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(197, 133, 86, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mllq"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(295, 176, 82, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imobx"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(197, 142, 86, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4a2s"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(296, 144, 82, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao4gj"]
+atlas = ExtResource("5_ao4gj")
+region = Rect2(1, 1, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdjqv"]
+atlas = ExtResource("2_2qe5m")
+region = Rect2(130, 66, 28, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0ht2"]
+atlas = ExtResource("1_gw16p")
+region = Rect2(96, -1, 97, 98)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ai2e2"]
+content_margin_top = 8.0
+texture = ExtResource("1_gw16p")
+region_rect = Rect2(63, 104, 65, 19)
+modulate_color = Color(0.86036915, 0.8603692, 0.8603692, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h5pod"]
+content_margin_top = 8.0
+texture = ExtResource("1_gw16p")
+region_rect = Rect2(63, 104, 65, 19)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_60vve"]
+content_margin_top = 8.0
+texture = ExtResource("1_gw16p")
+region_rect = Rect2(63, 104, 65, 19)
+modulate_color = Color(0.6649216, 0.66492164, 0.6649215, 1)
+
+[node name="LevelUI" type="CanvasLayer" unique_id=824301517]
+script = ExtResource("1_4mllq")
+
+[node name="HUD" type="Control" parent="." unique_id=2080063570]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="PlayerStats" type="HBoxContainer" parent="HUD" unique_id=332531254]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PortraitFrame" type="TextureRect" parent="HUD/PlayerStats" unique_id=1928012553]
+layout_mode = 2
+texture = SubResource("AtlasTexture_2qe5m")
+
+[node name="Face" type="TextureRect" parent="HUD/PlayerStats/PortraitFrame" unique_id=762759974]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 65.0
+offset_bottom = 87.0
+texture = ExtResource("3_xdjqv")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VitalsAndStats" type="VBoxContainer" parent="HUD/PlayerStats" unique_id=547180024]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="HealthBar" type="TextureProgressBar" parent="HUD/PlayerStats/VitalsAndStats" unique_id=198482770]
+layout_mode = 2
+value = 100.0
+texture_under = SubResource("AtlasTexture_esyny")
+texture_progress = SubResource("AtlasTexture_4mllq")
+texture_progress_offset = Vector2(2, 11)
+
+[node name="DashBar" type="TextureProgressBar" parent="HUD/PlayerStats/VitalsAndStats" unique_id=1096540736]
+layout_mode = 2
+step = 0.01
+value = 100.0
+texture_under = SubResource("AtlasTexture_imobx")
+texture_progress = SubResource("AtlasTexture_u4a2s")
+texture_progress_offset = Vector2(2, 2)
+
+[node name="CoinsTracker" type="HBoxContainer" parent="HUD/PlayerStats/VitalsAndStats" unique_id=2036885109]
+layout_mode = 2
+
+[node name="CoinsIcon" type="TextureRect" parent="HUD/PlayerStats/VitalsAndStats/CoinsTracker" unique_id=2052974953]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = SubResource("AtlasTexture_ao4gj")
+stretch_mode = 5
+
+[node name="CoinsLabel" type="Label" parent="HUD/PlayerStats/VitalsAndStats/CoinsTracker" unique_id=295272532]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_ao4gj")
+theme_override_font_sizes/font_size = 18
+text = "10"
+
+[node name="MonstersTracker" type="HBoxContainer" parent="HUD/PlayerStats/VitalsAndStats" unique_id=421357327]
+layout_mode = 2
+
+[node name="MonstersIcon" type="TextureRect" parent="HUD/PlayerStats/VitalsAndStats/MonstersTracker" unique_id=209465727]
+custom_minimum_size = Vector2(21, 20)
+layout_mode = 2
+texture = SubResource("AtlasTexture_xdjqv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MonstersLabel" type="Label" parent="HUD/PlayerStats/VitalsAndStats/MonstersTracker" unique_id=1420970729]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_ao4gj")
+theme_override_font_sizes/font_size = 18
+text = "10"
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1349029259]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="PauseMenu" unique_id=626899720]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.25490198)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PauseMenu" unique_id=1123884110]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_m0ht2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/NinePatchRect" unique_id=1016341841]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.0
+offset_top = -229.0
+offset_right = 253.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+
+[node name="TitleLabel" type="Label" parent="PauseMenu/NinePatchRect/VBoxContainer" unique_id=1661507011]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.73738, 0.6400331, 0.37275162, 1)
+theme_override_constants/outline_size = 21
+theme_override_fonts/font = ExtResource("6_ao4gj")
+theme_override_font_sizes/font_size = 100
+text = "MAGIC KOBOLD"
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/NinePatchRect/VBoxContainer" unique_id=1305858547]
+custom_minimum_size = Vector2(500, 133)
+custom_maximum_size = Vector2(500, 133)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("6_ao4gj")
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxTexture_ai2e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h5pod")
+theme_override_styles/hover = SubResource("StyleBoxTexture_60vve")
+text = "RESUME"
+
+[node name="MainMenuButton" type="Button" parent="PauseMenu/NinePatchRect/VBoxContainer" unique_id=1074978848]
+custom_minimum_size = Vector2(500, 133)
+custom_maximum_size = Vector2(500, 133)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("6_ao4gj")
+theme_override_font_sizes/font_size = 91
+theme_override_styles/normal = SubResource("StyleBoxTexture_ai2e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h5pod")
+theme_override_styles/hover = SubResource("StyleBoxTexture_60vve")
+text = "MAIN MENU"
+
+[node name="LevelComplete" type="Control" parent="." unique_id=880593325]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="LevelComplete" unique_id=417663678]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.25490198)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="LevelComplete" unique_id=735070026]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_m0ht2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelComplete/NinePatchRect" unique_id=527894143]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -222.0
+offset_right = 264.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+
+[node name="TitleLabel" type="Label" parent="LevelComplete/NinePatchRect/VBoxContainer" unique_id=1857509518]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.73738, 0.6400331, 0.37275162, 1)
+theme_override_constants/outline_size = 21
+theme_override_fonts/font = ExtResource("6_ao4gj")
+theme_override_font_sizes/font_size = 88
+text = "LEVEL COMPLETE"
+
+[node name="NextLevelButton" type="Button" parent="LevelComplete/NinePatchRect/VBoxContainer" unique_id=1883844932]
+custom_minimum_size = Vector2(500, 133)
+custom_maximum_size = Vector2(500, 133)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("6_ao4gj")
+theme_override_font_sizes/font_size = 86
+theme_override_styles/normal = SubResource("StyleBoxTexture_ai2e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h5pod")
+theme_override_styles/hover = SubResource("StyleBoxTexture_60vve")
+text = "NEXT LEVEL"
+
+[node name="MainMenuButton" type="Button" parent="LevelComplete/NinePatchRect/VBoxContainer" unique_id=959784947]
+custom_minimum_size = Vector2(500, 133)
+custom_maximum_size = Vector2(500, 133)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("6_ao4gj")
+theme_override_font_sizes/font_size = 91
+theme_override_styles/normal = SubResource("StyleBoxTexture_ai2e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h5pod")
+theme_override_styles/hover = SubResource("StyleBoxTexture_60vve")
+text = "MAIN MENU"
+
+[connection signal="pressed" from="PauseMenu/NinePatchRect/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/NinePatchRect/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="LevelComplete/NinePatchRect/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="LevelComplete/NinePatchRect/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

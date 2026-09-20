@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="1_1ehe0"]
 [ext_resource type="Shader" uid="uid://dmk2kb0ms38wl" path="res://Scenes/scroll.gdshader" id="1_ce3w2"]
+[ext_resource type="Script" uid="uid://b8u5nvfbed0du" path="res://Scenes/main_menu.gd" id="1_n45e2"]
 [ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="2_1ehe0"]
 [ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="2_48xlc"]
 
@@ -70,6 +71,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_n45e2")
 
 [node name="Background" type="TextureRect" parent="." unique_id=472646663]
 texture_repeat = 2
@@ -501,3 +503,6 @@ theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 32
 text = "His adventure has only just begun..."
+
+[connection signal="pressed" from="MenuPanel/Newgamebutton" to="." method="_on_newgamebutton_pressed"]
+[connection signal="pressed" from="MenuPanel/OptionsButton" to="." method="_on_options_button_pressed"]

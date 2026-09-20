@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://p0drib7bkyl"]
+
+[ext_resource type="Script" uid="uid://3novgfcdhwgj" path="res://Scenes/options.gd" id="1_prnvy"]
+[ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="2_qyyw6"]
+[ext_resource type="Shader" uid="uid://tf8jtc1k8o8s" path="res://Scenes/options.gdshader" id="3_ww8vx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
+shader = ExtResource("3_ww8vx")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("3_ww8vx")
+
+[node name="Options" type="Control" unique_id=641247655]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_prnvy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=179864752]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_n45e2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qyyw6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1962103169]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49803922)

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="1_1ehe0"]
 [ext_resource type="Shader" uid="uid://dmk2kb0ms38wl" path="res://Scenes/scroll.gdshader" id="1_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="2_1ehe0"]
-[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/black-goth-font/BlackgothRegular-xRg40.otf" id="2_48xlc"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="2_48xlc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1ehe0"]
 shader = ExtResource("1_ce3w2")

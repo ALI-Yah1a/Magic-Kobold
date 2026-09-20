@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bfuu20wl4dhl5"
-path="res://.godot/imported/BlackgothRegular-xRg40.otf-ef0032680c66ecf6a968ad97d7fb50a7.fontdata"
+path="res://.godot/imported/BlackgothRegular-xRg40.otf-36e00b0d1a61bc31e11ba6e1ba33b93d.fontdata"
 
 [deps]
 
-source_file="res://Assets/UI/black-goth-font/BlackgothRegular-xRg40.otf"
-dest_files=["res://.godot/imported/BlackgothRegular-xRg40.otf-ef0032680c66ecf6a968ad97d7fb50a7.fontdata"]
+source_file="res://Assets/UI/BlackgothRegular-xRg40.otf"
+dest_files=["res://.godot/imported/BlackgothRegular-xRg40.otf-36e00b0d1a61bc31e11ba6e1ba33b93d.fontdata"]
 
 [params]
 

@@ -121,3 +121,67 @@ theme_override_fonts/font = ExtResource("5_663nc")
 theme_override_font_sizes/font_size = 35
 text = "CONFIGURE YOUR ADVENTURE"
 horizontal_alignment = 1
+
+[node name="SettingsList" type="VBoxContainer" parent="OptionsPanel/Margins/Content" unique_id=131715802]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="MasterVolumeLabel" type="Label" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=2001360943]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "MASTER VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolumeSlider" type="HSlider" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1617455434]
+texture_filter = 1
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 2
+value = 80.0
+
+[node name="MusicVolumeLabel" type="Label" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1165898283]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "MUSIC VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeSlider" type="HSlider" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1713063884]
+texture_filter = 1
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 2
+value = 70.0
+
+[node name="FullscreenButton" type="CheckButton" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1632842966]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+button_pressed = true
+text = "FULLSCREEN"
+
+[node name="SoundButton" type="CheckButton" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=925230577]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+button_pressed = true
+text = "SOUND EFFECTS"
+
+[node name="ResetButton" type="Button" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1857680804]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "RESET DEFAULTS"
+
+[node name="BackButton" type="Button" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=896357833]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "BACK"

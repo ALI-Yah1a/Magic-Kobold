@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://c6ns38r0r5lwd"]
+
+[ext_resource type="Script" uid="uid://c7srjwyktxdcj" path="res://Scenes/levels.gd" id="1_3akqy"]
+[ext_resource type="Shader" uid="uid://bsln354t5e52d" path="res://Scenes/levels.gdshader" id="1_xgx5e"]
+[ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="1_yh33m"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="3_uusmb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xgx5e"]
+shader = ExtResource("1_xgx5e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.16078432, 0.29411766, 0.41960785, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8392157, 0.65882355, 0.30980393, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.2509804)
+anti_aliasing_size = 0.995
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0.11764706, 0.20784314, 0.3019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.65882355, 0.45882353, 0.18431373, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq62s"]
+bg_color = Color(0.23137255, 0.3882353, 0.52156866, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9490196, 0.8235294, 0.47843137, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.5019608)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Levels" type="Control" unique_id=1532406671]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3akqy")
+
+[node name="Background" type="TextureRect" parent="." unique_id=898821102]
+z_index = -1
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_xgx5e")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yh33m")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkOverLay" type="ColorRect" parent="." unique_id=1615084095]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.44313726)
+
+[node name="Label" type="Label" parent="." unique_id=2081236477]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 83.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 80
+text = "SELECT YOUR QUEST"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Label" unique_id=1399101684]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 123.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 50
+text = "Choose your destination"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Node" type="Node" parent="." unique_id=1922405389]
+
+[node name="Level 1 button" type="Button" parent="Node" unique_id=1414788017]
+z_index = 1
+texture_filter = 1
+offset_left = 387.0
+offset_top = 238.0
+offset_right = 607.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(1, 0.94509804, 0.78039217, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.09019608, 0.07450981, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "LEVEL 1"
+
+[node name="Level 2 button" type="Button" parent="Node" unique_id=782202129]
+z_index = 1
+texture_filter = 1
+offset_left = 508.0
+offset_top = 510.0
+offset_right = 728.0
+offset_bottom = 610.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(1, 0.94509804, 0.78039217, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.09019608, 0.07450981, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "LEVEL 2"
+
+[node name="Level 3 button" type="Button" parent="Node" unique_id=849281583]
+z_index = 1
+texture_filter = 1
+offset_left = 775.0
+offset_top = 273.0
+offset_right = 995.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(1, 0.94509804, 0.78039217, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.09019608, 0.07450981, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "LEVEL 3"
+
+[node name="Level 4 button" type="Button" parent="Node" unique_id=939435867]
+z_index = 1
+texture_filter = 1
+offset_left = 1165.0
+offset_top = 243.0
+offset_right = 1385.0
+offset_bottom = 343.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(1, 0.94509804, 0.78039217, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.09019608, 0.07450981, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "LEVEL 4"
+
+[node name="Level 5 button" type="Button" parent="Node" unique_id=759049986]
+z_index = 1
+texture_filter = 1
+offset_left = 1037.0
+offset_top = 514.0
+offset_right = 1257.0
+offset_bottom = 614.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(1, 0.94509804, 0.78039217, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.09019608, 0.07450981, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "LEVEL 5"
+
+[node name="Backbutton" type="Button" parent="Node" unique_id=1317990257]
+z_index = 1
+texture_filter = 1
+offset_left = 777.0
+offset_top = 697.0
+offset_right = 997.0
+offset_bottom = 797.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(1, 0.94509804, 0.78039217, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.09019608, 0.07450981, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "BACK"
+
+[connection signal="pressed" from="Node/Backbutton" to="." method="_on_backbutton_pressed"]

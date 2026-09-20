@@ -4,11 +4,11 @@ extends CanvasLayer
 @onready var coins_label: Label = $HUD/PlayerStats/VitalsAndStats/CoinsTracker/CoinsLabel
 @onready var monsters_label: Label = $HUD/PlayerStats/VitalsAndStats/MonstersTracker/MonstersLabel
 @onready var pause_menu: Control = $PauseMenu
-
+@onready var level_complete: Control = $LevelComplete
 @export var player: Player 
 @export var required_coins: int = 50
 @export var required_monsters: int = 10
-
+@export_file("*.tscn") var next_level_path: String
 var current_coins: int = 0
 var current_monsters: int = 0
 
@@ -51,20 +51,31 @@ func update_monsters_ui():
 	monsters_label.text = str(current_monsters) + " / " + str(required_monsters)
 
 func check_level_completion():
-	if current_coins >= required_coins and current_monsters >= required_monsters:
-		print("Level Complete!")
+	if current_coins >= required_coins and current_monsters >= required_monsters: 
+		level_complete.visible = true
+		get_tree().paused = true
 func _input(event):
 	if event.is_action_pressed("pause"):
 		toggle_pause()
-		
+	# cheat button
+	if event is InputEventKey and event.pressed and event.keycode == KEY_T:
+		level_complete.visible = true
+		get_tree().paused = true
 func toggle_pause():
 	var new_pause_state = not get_tree().paused
 	get_tree().paused = new_pause_state
 	pause_menu.visible = new_pause_state
+	
 	
 func _on_resume_button_pressed():
 	toggle_pause()
 
 func _on_main_menu_button_pressed():
 	get_tree().paused = false 
-	get_tree().change_scene_to_file("")
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+
+
+func _on_next_level_button_pressed() -> void:
+	get_tree().paused = false
+	if next_level_path != "":
+		get_tree().change_scene_to_file(next_level_path)

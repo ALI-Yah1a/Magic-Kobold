@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://p0drib7bkyl"]
+
+[ext_resource type="Script" uid="uid://3novgfcdhwgj" path="res://Scenes/options.gd" id="1_prnvy"]
+[ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="2_kftxf"]
+[ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="2_qyyw6"]
+[ext_resource type="Shader" uid="uid://tf8jtc1k8o8s" path="res://Scenes/options.gdshader" id="3_ww8vx"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="5_663nc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al4r6"]
+atlas = ExtResource("2_kftxf")
+region = Rect2(0, 0, 94.34971, 94.068375)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
+shader = ExtResource("3_ww8vx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kuey"]
+bg_color = Color(0.08235294, 0.14901961, 0.22745098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8392157, 0.65882355, 0.36078432, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.14509805, 0.16862746, 0.32156864, 0.60784316)
+shadow_offset = Vector2(2, 5)
+
+[node name="Options" type="Control" unique_id=641247655]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_prnvy")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=599318170]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -411.0
+offset_top = -423.5
+offset_right = 384.0
+offset_bottom = 419.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_al4r6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=179864752]
+z_index = -1
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_n45e2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qyyw6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1962103169]
+z_index = -1
+texture_filter = 1
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02745098, 0.06666667, 0.12156863, 0.26666668)
+
+[node name="OptionsPanel" type="PanelContainer" parent="." unique_id=1622048298]
+z_index = 1
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 571.0
+offset_top = 158.0
+offset_right = -579.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kuey")
+
+[node name="Margins" type="MarginContainer" parent="OptionsPanel" unique_id=118231402]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="Content" type="VBoxContainer" parent="OptionsPanel/Margins" unique_id=1488985810]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsPanel/Margins/Content" unique_id=1235220422]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.08235294, 0.08235294, 0.101960786, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 54
+text = "OPTIONS"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="OptionsPanel/Margins/Content" unique_id=1135201190]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.84705883, 0.81960785, 0.7529412, 1)
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 35
+text = "CONFIGURE YOUR ADVENTURE"
+horizontal_alignment = 1
+
+[node name="SettingsList" type="VBoxContainer" parent="OptionsPanel/Margins/Content" unique_id=131715802]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="MasterVolumeLabel" type="Label" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=2001360943]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "MASTER VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolumeSlider" type="HSlider" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1617455434]
+texture_filter = 1
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 2
+value = 80.0
+
+[node name="MusicVolumeLabel" type="Label" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1165898283]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "MUSIC VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeSlider" type="HSlider" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1713063884]
+texture_filter = 1
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 2
+value = 70.0
+
+[node name="FullscreenButton" type="CheckButton" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1632842966]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "FULLSCREEN"
+
+[node name="SoundButton" type="CheckButton" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=925230577]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+button_pressed = true
+text = "SOUND EFFECTS"
+
+[node name="ResetButton" type="Button" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1857680804]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "RESET DEFAULTS"
+
+[node name="BackButton" type="Button" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=896357833]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[connection signal="value_changed" from="OptionsPanel/Margins/Content/SettingsList/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="OptionsPanel/Margins/Content/SettingsList/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="toggled" from="OptionsPanel/Margins/Content/SettingsList/FullscreenButton" to="." method="_on_fullscreen_button_toggled"]
+[connection signal="toggled" from="OptionsPanel/Margins/Content/SettingsList/SoundButton" to="." method="_on_sound_button_toggled"]
+[connection signal="pressed" from="OptionsPanel/Margins/Content/SettingsList/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="OptionsPanel/Margins/Content/SettingsList/BackButton" to="." method="_on_back_button_pressed"]

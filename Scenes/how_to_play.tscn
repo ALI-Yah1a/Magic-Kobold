@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b0yucyhqutdt7"]
+
+[ext_resource type="Shader" uid="uid://ilb1udewp2qd" path="res://new_shader.gdshader" id="1_wpr6w"]
+[ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="2_dlnx3"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="3_dlnx3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("1_wpr6w")
+
+[node name="How To Play" type="Control" unique_id=1593559544]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=205115770]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dlnx3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=357374880]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.41960785)
+
+[node name="Label" type="Label" parent="." unique_id=528691101]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 60
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1

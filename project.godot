@@ -31,6 +31,10 @@ window/stretch/aspect="ignore"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+UI=""
+
 [input]
 
 run_left={

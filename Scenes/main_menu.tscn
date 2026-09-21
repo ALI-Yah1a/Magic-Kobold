@@ -507,3 +507,4 @@ text = "His adventure has only just begun..."
 [connection signal="pressed" from="MenuPanel/Newgamebutton" to="." method="_on_newgamebutton_pressed"]
 [connection signal="pressed" from="MenuPanel/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MenuPanel/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MenuPanel/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]

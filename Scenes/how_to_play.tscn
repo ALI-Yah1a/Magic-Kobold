@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://b0yucyhqutdt7"]
+
+[ext_resource type="Script" uid="uid://wtrw8an54eq5" path="res://Scenes/how_to_play.gd" id="1_lonyb"]
+[ext_resource type="Shader" uid="uid://ilb1udewp2qd" path="res://new_shader.gdshader" id="1_wpr6w"]
+[ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="2_dlnx3"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="3_dlnx3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("1_wpr6w")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.16078432, 0.29411766, 0.41960785, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8392157, 0.65882355, 0.30980393, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.2509804)
+anti_aliasing_size = 0.995
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0.11764706, 0.20784314, 0.3019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.65882355, 0.45882353, 0.18431373, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq62s"]
+bg_color = Color(0.23137255, 0.3882353, 0.52156866, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9490196, 0.8235294, 0.47843137, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.5019608)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="How To Play" type="Control" unique_id=1593559544]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lonyb")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=205115770]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dlnx3")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=357374880]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.41960785)
+
+[node name="Label" type="Label" parent="." unique_id=528691101]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 60
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label" unique_id=1908105134]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 117.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 50
+text = "LEARN THE BASICS OF SURVIVAL "
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HowToPlayPanel" type="Panel" parent="." unique_id=1160587699]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -404.0
+offset_top = -250.0
+offset_right = 396.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1807788113]
+texture_filter = 1
+layout_mode = 0
+offset_left = 529.0
+offset_top = 272.0
+offset_right = 1179.0
+offset_bottom = 309.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 35
+text = "MOVEMENT"
+
+[node name="AButton" type="Button" parent="." unique_id=1969978054]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 287.0
+offset_right = 1069.0
+offset_bottom = 343.0
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "A"
+
+[node name="DButton" type="Button" parent="." unique_id=1814743495]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 287.0
+offset_right = 1140.0
+offset_bottom = 343.0
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "D"
+
+[node name="DirectionLabel" type="Label" parent="." unique_id=1393431407]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 287.0
+offset_right = 995.0
+offset_bottom = 347.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 57
+text = "PRESS A OR D"
+
+[connection signal="pressed" from="AButton" to="." method="_on_a_button_pressed"]
+[connection signal="pressed" from="DButton" to="." method="_on_d_button_pressed"]

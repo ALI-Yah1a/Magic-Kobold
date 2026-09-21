@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://ct66afrbjw0q6"]
+
+[ext_resource type="Script" uid="uid://bwfwh01tpeetm" path="res://Scripts/medusa.gd" id="1_6op67"]
+[ext_resource type="Texture2D" uid="uid://d230i1d8np1ph" path="res://Assets/Monsters/medusa/Attack1.png" id="1_qodac"]
+[ext_resource type="Texture2D" uid="uid://wpd312r0pxtl" path="res://Assets/Monsters/medusa/Attack2.png" id="2_t7yfa"]
+[ext_resource type="Texture2D" uid="uid://7hlmq6p3n6j8" path="res://Assets/Monsters/medusa/Attack3.png" id="3_6op67"]
+[ext_resource type="Texture2D" uid="uid://x1pr6i51rpae" path="res://Assets/Monsters/medusa/Attack4.png" id="4_3d8hq"]
+[ext_resource type="Texture2D" uid="uid://bb1xr2vd1ig3c" path="res://Assets/Monsters/medusa/Attack5.png" id="5_jkknj"]
+[ext_resource type="Texture2D" uid="uid://bmalv8gr5cddq" path="res://Assets/Monsters/medusa/Attack6.png" id="6_x6y03"]
+[ext_resource type="Texture2D" uid="uid://clkgc62sgvlf6" path="res://Assets/Monsters/medusa/Death1.png" id="7_fqo7i"]
+[ext_resource type="Texture2D" uid="uid://ceqaghmyqaifi" path="res://Assets/Monsters/medusa/Death2.png" id="8_a1vrp"]
+[ext_resource type="Texture2D" uid="uid://dqlbblaoc3ca0" path="res://Assets/Monsters/medusa/Death3.png" id="9_0is7d"]
+[ext_resource type="Texture2D" uid="uid://d4fqyggfm7ew3" path="res://Assets/Monsters/medusa/Death4.png" id="10_qcrgt"]
+[ext_resource type="Texture2D" uid="uid://b8ld7d2dv07h3" path="res://Assets/Monsters/medusa/Death5.png" id="11_byr62"]
+[ext_resource type="Texture2D" uid="uid://o5wfeqt67axt" path="res://Assets/Monsters/medusa/Death6.png" id="12_mbyfb"]
+[ext_resource type="Texture2D" uid="uid://dxbm05f78r8rd" path="res://Assets/Monsters/medusa/Hurt1.png" id="13_2vgpg"]
+[ext_resource type="Texture2D" uid="uid://bwxs5uc7yy5ij" path="res://Assets/Monsters/medusa/Hurt2.png" id="14_hm57o"]
+[ext_resource type="Texture2D" uid="uid://dqv40ees48e6r" path="res://Assets/Monsters/medusa/Idle1.png" id="15_8ylx0"]
+[ext_resource type="Texture2D" uid="uid://q3wh7u0ett7s" path="res://Assets/Monsters/medusa/Idle2.png" id="16_6tx7l"]
+[ext_resource type="Texture2D" uid="uid://4shtlbi5xgkm" path="res://Assets/Monsters/medusa/Idle3.png" id="17_i868t"]
+[ext_resource type="Texture2D" uid="uid://dfy58bdm11775" path="res://Assets/Monsters/medusa/Walk1.png" id="18_cn58p"]
+[ext_resource type="Texture2D" uid="uid://c4dgalei5kwjc" path="res://Assets/Monsters/medusa/Walk2.png" id="19_qvmux"]
+[ext_resource type="Texture2D" uid="uid://cimy2e2m0k0ft" path="res://Assets/Monsters/medusa/Walk3.png" id="20_s6sdq"]
+[ext_resource type="Texture2D" uid="uid://dgtp1p64cmitx" path="res://Assets/Monsters/medusa/Walk4.png" id="21_fi4bp"]
+[ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="22_t7yfa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t76eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qodac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t7yfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6op67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3d8hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jkknj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x6y03")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fqo7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a1vrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0is7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qcrgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_byr62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mbyfb")
+}],
+"loop": 0,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_2vgpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hm57o")
+}],
+"loop": 2,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_8ylx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6tx7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i868t")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_cn58p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qvmux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_s6sdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fi4bp")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m0ht2"]
+custom_solver_bias = 0.561
+radius = 23.0
+height = 52.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t76eq"]
+atlas = ExtResource("22_t7yfa")
+region = Rect2(197, 135, 86, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0ht2"]
+atlas = ExtResource("22_t7yfa")
+region = Rect2(199, 176, 82, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t76eq"]
+size = Vector2(272, 64)
+
+[node name="Medusa" type="CharacterBody2D" unique_id=532436669]
+script = ExtResource("1_6op67")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=472444814]
+sprite_frames = SubResource("SpriteFrames_t76eq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=782109295]
+position = Vector2(-11, 6)
+shape = SubResource("CapsuleShape2D_m0ht2")
+
+[node name="GroundRay" type="RayCast2D" parent="." unique_id=1784134251]
+position = Vector2(17, -6)
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1858630901]
+offset_left = -34.000004
+offset_top = -41.0
+offset_right = 51.999996
+offset_bottom = -1.0
+scale = Vector2(0.7, 0.7)
+value = 100.0
+texture_under = SubResource("AtlasTexture_t76eq")
+texture_progress = SubResource("AtlasTexture_m0ht2")
+texture_progress_offset = Vector2(2, 9)
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1047391886]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1529864910]
+position = Vector2(-1, 3)
+shape = SubResource("RectangleShape2D_t76eq")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

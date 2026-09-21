@@ -23,7 +23,7 @@ signal dash_started(duration)
 
 func _ready():
 	current_health = max_health
-
+	$Hitbox.monitoring = false
 func _input(event):
 	if is_hurt:
 		return
@@ -79,10 +79,10 @@ func update_facing_direction(direction: float):
 	animated_sprite_2d.flip_h = is_facing_left
 	
 	if is_facing_left:
-		animated_sprite_2d.position.x = -9
-		$Hitbox.position.x = -9 - 75.0 
+		animated_sprite_2d.position.x = -9 
+		$Hitbox.position.x = -25.0 
 	else:
-		animated_sprite_2d.position.x = 0
+		animated_sprite_2d.position.x = 0 
 		$Hitbox.position.x = 25.0
 func update_animations(direction: float):
 	if not is_on_floor():
@@ -150,3 +150,10 @@ func _on_animated_sprite_2d_animation_finished():
 		$Hitbox.monitoring = false
 	if animated_sprite_2d.animation == "dash":
 		is_dashing = false
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	if not is_attacking:
+		return
+	if body is Enemy and body.has_method("take_damage"):
+		body.take_damage(1)

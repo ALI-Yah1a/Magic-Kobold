@@ -363,9 +363,10 @@ radius = 7.0
 height = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esyny"]
-size = Vector2(7, 29.75)
+size = Vector2(71, 29.75)
 
 [node name="Player" type="CharacterBody2D" unique_id=2019291134]
+scale = Vector2(2, 2)
 script = ExtResource("1_pukcj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1209423592]
@@ -378,9 +379,11 @@ shape = SubResource("CapsuleShape2D_pht35")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=787518714]
 position = Vector2(-4, 1)
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=786410238]
-position = Vector2(28, 4.125)
+position = Vector2(-1.5, 4.125)
 shape = SubResource("RectangleShape2D_esyny")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

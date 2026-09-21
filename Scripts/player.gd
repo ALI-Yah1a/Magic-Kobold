@@ -5,7 +5,7 @@ class_name Player
 @onready var hitbox: Area2D = $Hitbox
 
 const SPEED = 170.0
-const JUMP_VELOCITY = -380.0
+const JUMP_VELOCITY = -450.0
 const DASH_SPEED = 250.0
 const DASH_COOLDOWN = 2
 

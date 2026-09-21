@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6ns38r0r5lwd"]
 
 [ext_resource type="Script" uid="uid://c7srjwyktxdcj" path="res://Scenes/levels.gd" id="1_3akqy"]
-[ext_resource type="Shader" uid="uid://bsln354t5e52d" path="res://Scenes/levels.gdshader" id="1_xgx5e"]
+[ext_resource type="Shader" uid="uid://cnwjc1f03hhtw" path="res://Scenes/levels.gdshader" id="1_xgx5e"]
 [ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="1_yh33m"]
 [ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="3_uusmb"]
 
@@ -230,4 +230,5 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "BACK"
 
+[connection signal="pressed" from="Node/Level 1 button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="Node/Backbutton" to="." method="_on_backbutton_pressed"]

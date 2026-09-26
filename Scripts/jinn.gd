@@ -1,15 +1,15 @@
 extends CharacterBody2D
-class_name enemy
+class_name enemy1
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var ground_ray: RayCast2D = $GroundRay
 @onready var health_bar = $HealthBar
 
-const FIRE_SCENE = preload("res://Scenes/dragon_fire.tscn")
+const PROJECTILE_SCENE = preload("res://Scenes/jinn_magic.tscn") 
 var speed = 110
 var chase_speed = 130
-var attack_range = 120.0
+var attack_range = 150.0
 var attack_cooldown = 1.5
 var first_attack_delay = 0.5
 var direction = 1
@@ -79,7 +79,7 @@ func _physics_process(delta):
 				ground_ray.position.x = abs(ground_ray.position.x) 
 			else:
 				animated_sprite_2d.flip_h = true
-				animated_sprite_2d.position.x = 18
+				animated_sprite_2d.position.x = -30
 				$DetectionArea.scale.x = -1
 				ground_ray.position.x = -abs(ground_ray.position.x) 
 		else:
@@ -109,28 +109,31 @@ func start_attack():
 	await get_tree().create_timer(0.4).timeout 
 	
 	if is_alive:
-		breathe_fire()
+		shoot_attack() 
 	await get_tree().create_timer(0.3).timeout 
 	is_attacking = false
 	animated_sprite_2d.play("idle") 
 	
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
-func breathe_fire():
-	var fire = FIRE_SCENE.instantiate()
+
+func shoot_attack():
+	var projectile = PROJECTILE_SCENE.instantiate()
 	var is_facing_left = animated_sprite_2d.flip_h
 	
 	var spawn_offset_x = -30 if is_facing_left else 30
-	fire.global_position = global_position + Vector2(spawn_offset_x, -10) 
+	
+	projectile.global_position = global_position + Vector2(spawn_offset_x, -5) 
 	
 	if is_facing_left:
-		fire.scale.x = -1
-		fire.direction = Vector2(-1, 1) 
+		projectile.scale.x = -1
+		projectile.direction = Vector2(-1, 0) 
 	else:
-		fire.scale.x = 1
-		fire.direction = Vector2(1, 1) 
+		projectile.scale.x = 1
+		projectile.direction = Vector2(1, 0) 
 		
-	get_tree().current_scene.add_child(fire)
+	get_tree().current_scene.add_child(projectile)
+
 func take_damage(amount):
 	if not is_alive or is_hurt:
 		return

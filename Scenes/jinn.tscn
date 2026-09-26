@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://c3j5p0u2nnns2"]
+
+[ext_resource type="Script" uid="uid://cfbxjjsvl1et3" path="res://Scripts/jinn.gd" id="1_qfxe2"]
+[ext_resource type="Texture2D" uid="uid://cp8nexihqguu4" path="res://Assets/Monsters/jinn_animation/Attack1.png" id="2_uj6it"]
+[ext_resource type="Texture2D" uid="uid://bpt3kc75tkvb2" path="res://Assets/Monsters/jinn_animation/Attack2.png" id="3_p0dfj"]
+[ext_resource type="Texture2D" uid="uid://b1dah3cauiju5" path="res://Assets/Monsters/jinn_animation/Attack3.png" id="4_iionw"]
+[ext_resource type="Texture2D" uid="uid://dp6lio4v7v5aa" path="res://Assets/Monsters/jinn_animation/Attack4.png" id="5_mlk5n"]
+[ext_resource type="Texture2D" uid="uid://hj5kv81mahn0" path="res://Assets/Monsters/jinn_animation/Death1.png" id="6_ikth6"]
+[ext_resource type="Texture2D" uid="uid://bfbp4l0wcvy2b" path="res://Assets/Monsters/jinn_animation/Death2.png" id="7_a4sa1"]
+[ext_resource type="Texture2D" uid="uid://bsowhb1x1315a" path="res://Assets/Monsters/jinn_animation/Death3.png" id="8_55np1"]
+[ext_resource type="Texture2D" uid="uid://tyf512gnog8x" path="res://Assets/Monsters/jinn_animation/Death4.png" id="9_whm3g"]
+[ext_resource type="Texture2D" uid="uid://da4n8ceqqlf10" path="res://Assets/Monsters/jinn_animation/Death5.png" id="10_ifu2w"]
+[ext_resource type="Texture2D" uid="uid://ihcx6tam1oo3" path="res://Assets/Monsters/jinn_animation/Death6.png" id="11_tr618"]
+[ext_resource type="Texture2D" uid="uid://bfhet622cruk7" path="res://Assets/Monsters/jinn_animation/Hurt1.png" id="12_he2d2"]
+[ext_resource type="Texture2D" uid="uid://cpubse2g2kgwd" path="res://Assets/Monsters/jinn_animation/Hurt2.png" id="13_vlf1s"]
+[ext_resource type="Texture2D" uid="uid://ddbhuq8kl2tbc" path="res://Assets/Monsters/jinn_animation/Idle1.png" id="14_r8jul"]
+[ext_resource type="Texture2D" uid="uid://d1gvna24vmgfb" path="res://Assets/Monsters/jinn_animation/Idle2.png" id="15_0k0oa"]
+[ext_resource type="Texture2D" uid="uid://cm77r1572wt3k" path="res://Assets/Monsters/jinn_animation/Idle3.png" id="16_oo0ha"]
+[ext_resource type="Texture2D" uid="uid://ckdniyp0euisi" path="res://Assets/Monsters/jinn_animation/Flight1.png" id="17_kc2sn"]
+[ext_resource type="Texture2D" uid="uid://c660ppwmp14ic" path="res://Assets/Monsters/jinn_animation/Flight2.png" id="18_kqht0"]
+[ext_resource type="Texture2D" uid="uid://byj6wdc7lch21" path="res://Assets/Monsters/jinn_animation/Flight3.png" id="19_r2lnc"]
+[ext_resource type="Texture2D" uid="uid://dqhvbip8i6t30" path="res://Assets/Monsters/jinn_animation/Flight4.png" id="20_6wjp0"]
+[ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="21_bhjdl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t76eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uj6it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p0dfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iionw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mlk5n")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ikth6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a4sa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_55np1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_whm3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ifu2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tr618")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_he2d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vlf1s")
+}],
+"loop": 2,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_r8jul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0k0oa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_oo0ha")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_kc2sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kqht0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_r2lnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6wjp0")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_esyny"]
+radius = 18.0
+height = 84.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlvfx"]
+atlas = ExtResource("21_bhjdl")
+region = Rect2(197, 135, 86, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cipvd"]
+atlas = ExtResource("21_bhjdl")
+region = Rect2(199, 176, 82, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwqab"]
+size = Vector2(370, 64)
+
+[node name="Jinn" type="CharacterBody2D" unique_id=1666029679 groups=["Enemy"]]
+script = ExtResource("1_qfxe2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=608986678]
+sprite_frames = SubResource("SpriteFrames_t76eq")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1013602296]
+position = Vector2(-14, 9)
+shape = SubResource("CapsuleShape2D_esyny")
+
+[node name="GroundRay" type="RayCast2D" parent="." unique_id=1690048232]
+position = Vector2(11, 7)
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1394816969]
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 43.0
+offset_bottom = -13.0
+scale = Vector2(0.7, 0.7)
+value = 100.0
+texture_under = SubResource("AtlasTexture_mlvfx")
+texture_progress = SubResource("AtlasTexture_cipvd")
+texture_progress_offset = Vector2(2, 9)
+metadata/_edit_use_anchors_ = true
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=974975194]
+position = Vector2(-14, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=933119430]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_iwqab")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

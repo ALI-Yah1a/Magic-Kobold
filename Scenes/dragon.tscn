@@ -126,7 +126,7 @@ script = ExtResource("1_hyyqq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2073247218]
 sprite_frames = SubResource("SpriteFrames_77vn0")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1013602296]
@@ -146,6 +146,7 @@ value = 100.0
 texture_under = SubResource("AtlasTexture_mlvfx")
 texture_progress = SubResource("AtlasTexture_cipvd")
 texture_progress_offset = Vector2(2, 9)
+metadata/_edit_use_anchors_ = true
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=974975194]
 position = Vector2(19, 26)

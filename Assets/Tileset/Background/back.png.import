@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmwa50o3h7etb"
-path="res://.godot/imported/Green-Tree.png-13367639f68269799463225d08556e83.ctex"
+uid="uid://dkxo2fma17o5x"
+path="res://.godot/imported/back.png-6464ced0221234016057c4f10b116172.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tileset/Trees/Green-Tree.png"
-dest_files=["res://.godot/imported/Green-Tree.png-13367639f68269799463225d08556e83.ctex"]
+source_file="res://Assets/Tileset/Background/back.png"
+dest_files=["res://.godot/imported/back.png-6464ced0221234016057c4f10b116172.ctex"]
 
 [params]
 

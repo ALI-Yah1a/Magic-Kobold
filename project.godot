@@ -39,6 +39,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 UI=""
 Levels=""
+Enemy=""
+player=""
 
 [input]
 

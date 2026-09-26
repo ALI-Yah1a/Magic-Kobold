@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://budsxjlvnt44p"]
+
+[ext_resource type="Script" uid="uid://wy4q6m0lyfju" path="res://Scripts/dragon_fire.gd" id="1_nl2ux"]
+[ext_resource type="Texture2D" uid="uid://tph334naore6" path="res://Assets/Monsters/dragon/Fire_Attack1.png" id="2_nvc63"]
+[ext_resource type="Texture2D" uid="uid://4trbhyqfqag3" path="res://Assets/Monsters/dragon/Fire_Attack2.png" id="3_ar02h"]
+[ext_resource type="Texture2D" uid="uid://c4hvvud8ks0sn" path="res://Assets/Monsters/dragon/Fire_Attack3.png" id="4_vh58n"]
+[ext_resource type="Texture2D" uid="uid://bgiw201ykh0j7" path="res://Assets/Monsters/dragon/Fire_Attack4.png" id="5_qyew8"]
+[ext_resource type="Texture2D" uid="uid://dt0yiierd2yr5" path="res://Assets/Monsters/dragon/Fire_Attack5.png" id="6_8kctr"]
+[ext_resource type="Texture2D" uid="uid://dd2f3spd6fjgv" path="res://Assets/Monsters/dragon/Fire_Attack6.png" id="7_k2aam"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t76eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nvc63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ar02h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vh58n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qyew8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8kctr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k2aam")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1idy"]
+size = Vector2(79.5, 48.5)
+
+[node name="DragonFire" type="Area2D" unique_id=479745317]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_nl2ux")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=507960586]
+sprite_frames = SubResource("SpriteFrames_t76eq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.20595178
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1925249075]
+position = Vector2(1.25, 4.75)
+shape = SubResource("RectangleShape2D_g1idy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

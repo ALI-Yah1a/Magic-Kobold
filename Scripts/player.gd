@@ -176,5 +176,5 @@ func _on_animated_sprite_2d_animation_finished():
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if not is_attacking:
 		return
-	if body is Enemy and body.has_method("take_damage"):
+	if body.is_in_group("Enemy") and body.has_method("take_damage"):
 		body.take_damage(1)

@@ -365,7 +365,7 @@ height = 32.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esyny"]
 size = Vector2(28.5, 32.375)
 
-[node name="Player" type="CharacterBody2D" unique_id=2019291134]
+[node name="Player" type="CharacterBody2D" unique_id=2019291134 groups=["player"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_pukcj")
 

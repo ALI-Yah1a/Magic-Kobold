@@ -131,12 +131,12 @@ region = Rect2(199, 176, 82, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t76eq"]
 size = Vector2(370, 64)
 
-[node name="Medusa" type="CharacterBody2D" unique_id=532436669]
+[node name="Medusa" type="CharacterBody2D" unique_id=532436669 groups=["Enemy"]]
 script = ExtResource("1_6op67")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=472444814]
 sprite_frames = SubResource("SpriteFrames_t76eq")
-animation = &"idle"
+animation = &"hurt"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=782109295]

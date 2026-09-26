@@ -6,10 +6,12 @@ class_name Enemy
 @onready var ground_ray: RayCast2D = $GroundRay
 @onready var health_bar = $HealthBar
 
+const STONE_SCENE = preload("res://Scenes/medusa_stone.tscn")
 var speed = 110
 var chase_speed = 130
-var attack_range = 38.0
-var attack_cooldown = 0.5
+var attack_range = 90.0
+var attack_cooldown = 1.5
+var first_attack_delay = 0.6
 var direction = 1
 var max_hp = 2
 var current_hp = 2
@@ -19,6 +21,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var is_chasing = false
 var is_attacking = false
+var is_preparing_attack = false
 var can_attack = true 
 var player_ref: Node2D = null
 
@@ -47,10 +50,9 @@ func _physics_process(delta):
 			direction = dir_to_player
 
 		if distance_to_player <= attack_range:
-			if can_attack:
-				start_attack()
-			else:
-				velocity.x = 0
+			velocity.x = 0
+			if can_attack and not is_preparing_attack:
+				trigger_attack_sequence()
 		else:
 			if not ground_ray.is_colliding() and is_on_floor():
 				velocity.x = 0
@@ -67,7 +69,7 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	
-	if not is_attacking and not is_hurt:
+	if not is_attacking and not is_hurt and not is_preparing_attack:
 		if velocity.x != 0:
 			animated_sprite_2d.play("walk")
 			if direction > 0:
@@ -83,6 +85,19 @@ func _physics_process(delta):
 		else:
 			animated_sprite_2d.play("idle")
 
+func trigger_attack_sequence():
+	is_preparing_attack = true
+	animated_sprite_2d.play("idle")
+	await get_tree().create_timer(first_attack_delay).timeout
+	
+	if is_alive and not is_hurt and is_instance_valid(player_ref):
+		var enemy_visual_center = Vector2(global_position.x + animated_sprite_2d.position.x, global_position.y)
+		var current_dist = enemy_visual_center.distance_to(player_ref.global_position)
+		if current_dist <= attack_range:
+			start_attack()
+			
+	is_preparing_attack = false
+
 func start_attack():
 	is_attacking = true
 	can_attack = false 
@@ -90,20 +105,22 @@ func start_attack():
 	
 	if animated_sprite_2d.sprite_frames.has_animation("attack"):
 		animated_sprite_2d.play("attack")
+	await get_tree().create_timer(0.4).timeout 
 	
-	await get_tree().create_timer(0.3).timeout 
-	
-	if is_attacking and is_instance_valid(player_ref):
-		var enemy_visual_center = Vector2(global_position.x + animated_sprite_2d.position.x, global_position.y)
-		if enemy_visual_center.distance_to(player_ref.global_position) <= attack_range + 20.0:
-			if player_ref.has_method("take_damage"):
-				player_ref.take_damage(10)
-				
-	await get_tree().create_timer(0.3).timeout 
+	if is_alive:
+		throw_stone()
+	await animated_sprite_2d.animation_finished 
 	is_attacking = false
 	
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
+
+func throw_stone():
+	var stone = STONE_SCENE.instantiate()
+	stone.direction = -1 if animated_sprite_2d.flip_h else 1
+	var spawn_offset_x = -20 if animated_sprite_2d.flip_h else 20
+	stone.global_position = global_position + Vector2(spawn_offset_x, -10)
+	get_tree().current_scene.add_child(stone)
 
 func take_damage(amount):
 	if not is_alive or is_hurt:
@@ -113,8 +130,9 @@ func take_damage(amount):
 	current_hp -= amount
 	health_bar.value = current_hp
 	
-	if is_attacking:
+	if is_attacking or is_preparing_attack:
 		is_attacking = false
+		is_preparing_attack = false
 	
 	if current_hp > 0:
 		if animated_sprite_2d.sprite_frames.has_animation("hurt"):

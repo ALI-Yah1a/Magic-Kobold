@@ -363,7 +363,7 @@ radius = 7.0
 height = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esyny"]
-size = Vector2(71, 29.75)
+size = Vector2(28.5, 32.375)
 
 [node name="Player" type="CharacterBody2D" unique_id=2019291134]
 scale = Vector2(2, 2)
@@ -382,7 +382,7 @@ position = Vector2(-4, 1)
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=786410238]
-position = Vector2(-1.5, 4.125)
+position = Vector2(-3.25, 3.1875)
 shape = SubResource("RectangleShape2D_esyny")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

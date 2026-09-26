@@ -5,7 +5,7 @@ class_name Player
 @onready var hitbox: Area2D = $Hitbox
 
 const SPEED = 170.0
-const JUMP_VELOCITY = -380.0
+const JUMP_VELOCITY = -450.0
 const DASH_SPEED = 250.0
 const DASH_COOLDOWN = 2
 
@@ -13,8 +13,8 @@ var is_attacking = false
 var can_attack = true
 var is_hurt = false
 var is_dash_attacking = false
-var is_dashing = false 
-var can_dash = true    
+var can_dash = true
+var is_dashing = false
 
 var max_health = 100
 var current_health = 100
@@ -41,6 +41,7 @@ func _input(event):
 				dash_attack()
 			else:
 				attack()
+	
 
 func _physics_process(delta):
 	if is_hurt or (is_attacking and not is_dash_attacking):
@@ -54,10 +55,8 @@ func _physics_process(delta):
 		velocity += get_gravity() * delta
 		
 	var direction = Input.get_axis("run_left", "run_right")
-	if is_dash_attacking:
-		var facing_dir = -1 if animated_sprite_2d.flip_h else 1
-		velocity.x = facing_dir * DASH_SPEED
-	elif is_dashing:
+	var dash = Input.is_action_pressed("dash") 
+	if is_dash_attacking or is_dashing:
 		var facing_dir = -1 if animated_sprite_2d.flip_h else 1
 		velocity.x = facing_dir * DASH_SPEED
 	else:
@@ -65,11 +64,12 @@ func _physics_process(delta):
 			velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
 	move_and_slide()
+	
 	if not is_dash_attacking and not is_dashing:
 		update_facing_direction(direction)
-		update_animations(direction)
+		update_animations(direction, dash)
 
 func update_facing_direction(direction: float):
 	if direction == 0:
@@ -84,14 +84,17 @@ func update_facing_direction(direction: float):
 	else:
 		animated_sprite_2d.position.x = 0 
 		$Hitbox.position.x = 25.0
-func update_animations(direction: float):
+func update_animations(direction: float, dash: bool):
 	if not is_on_floor():
 		if velocity.y < 0.0:
 			animated_sprite_2d.play("jump")
 		elif velocity.y > 0.0:
 			animated_sprite_2d.play("fall")
 	elif direction != 0:
-		animated_sprite_2d.play("run")
+		if dash:
+			animated_sprite_2d.play("dash") 
+		else:
+			animated_sprite_2d.play("run")
 	else:
 		animated_sprite_2d.play("idle")
 
@@ -103,22 +106,40 @@ func start_dash():
 	get_tree().create_timer(DASH_COOLDOWN).timeout.connect(func(): can_dash = true)
 
 func attack():
+	if not can_attack: 
+		return
 	is_attacking = true
 	can_attack = false
 	animated_sprite_2d.play("attack")
-	$Hitbox.monitoring = true
+	await get_tree().create_timer(0.4).timeout
+	if is_attacking:
+		$Hitbox.monitoring = true
+	for body in $Hitbox.get_overlapping_bodies():
+			if body.has_method("take_damage") and body != self:
+				body.take_damage(10)
 
 func dash_attack():
+	if not can_attack: 
+		return
 	is_attacking = true
 	is_dash_attacking = true
 	can_attack = false
 	animated_sprite_2d.play("dash-attack")
-	$Hitbox.monitoring = true
+	await get_tree().create_timer(0.35).timeout
+	
+	if is_attacking:
+		$Hitbox.monitoring = true
+	for body in $Hitbox.get_overlapping_bodies():
+			if body.has_method("take_damage") and body != self:
+				body.take_damage(10)
 
 func take_damage(amount):
 	if is_hurt:
 		return
-	is_dashing = false
+	is_attacking = false
+	is_dash_attacking = false
+	can_attack = true
+	$Hitbox.set_deferred("monitoring", false)
 	current_health -= amount
 	current_health = clamp(current_health, 0, max_health) 
 	health_changed.emit(current_health)

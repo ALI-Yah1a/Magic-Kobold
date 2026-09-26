@@ -129,7 +129,7 @@ atlas = ExtResource("22_t7yfa")
 region = Rect2(199, 176, 82, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t76eq"]
-size = Vector2(272, 64)
+size = Vector2(370, 64)
 
 [node name="Medusa" type="CharacterBody2D" unique_id=532436669]
 script = ExtResource("1_6op67")
@@ -160,7 +160,7 @@ texture_progress_offset = Vector2(2, 9)
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1047391886]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1529864910]
-position = Vector2(-1, 3)
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_t76eq")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

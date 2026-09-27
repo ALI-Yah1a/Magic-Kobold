@@ -6,7 +6,8 @@ extends Control
 @onready var fullscreen_button = $OptionsPanel/Margins/Content/SettingsList/FullscreenButton
 @onready var sound_button = $OptionsPanel/Margins/Content/SettingsList/SoundButton
 @onready var reset_button = $OptionsPanel/Margins/Content/SettingsList/ResetButton
-@onready var back_button = $OptionsPanel/Margins/Content/SettingsList/BackButton
+@onready var return_button = $OptionsPanel/Margins/Content/SettingsList/ReturnButton
+
 
 
 func _ready() -> void:
@@ -51,3 +52,4 @@ func _on_reset_button_pressed() -> void:
 
 func _on_return_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	Transition.change_scene("res://Scenes/main_menu.tscn")

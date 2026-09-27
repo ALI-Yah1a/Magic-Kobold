@@ -51,6 +51,163 @@ shadow_color = Color(0, 0, 0, 0.5019608)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
+[sub_resource type="Animation" id="Animation_3akqy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/Level 1 button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Level 2 button:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Level 3 button:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Level 4 button:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Level 5 button:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Returnbutton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jk88k"]
+resource_name = "level_animation"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/Level 1 button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Level 2 button:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Level 3 button:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/Level 4 button:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node/Level 5 button:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.0666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node/Returnbutton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uotyi"]
+_data = {
+&"RESET": SubResource("Animation_3akqy"),
+&"level_animation": SubResource("Animation_jk88k")
+}
+
 [node name="Levels" type="Control" unique_id=1532406671]
 layout_mode = 3
 anchors_preset = 15
@@ -117,6 +274,7 @@ vertical_alignment = 2
 [node name="Node" type="Node" parent="." unique_id=1922405389]
 
 [node name="Level 1 button" type="Button" parent="Node" unique_id=1414788017]
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
 offset_left = 387.0
@@ -136,6 +294,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "LEVEL 1"
 
 [node name="Level 2 button" type="Button" parent="Node" unique_id=782202129]
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
 offset_left = 508.0
@@ -155,6 +314,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "LEVEL 2"
 
 [node name="Level 3 button" type="Button" parent="Node" unique_id=849281583]
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
 offset_left = 775.0
@@ -174,6 +334,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "LEVEL 3"
 
 [node name="Level 4 button" type="Button" parent="Node" unique_id=939435867]
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
 offset_left = 1165.0
@@ -193,6 +354,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "LEVEL 4"
 
 [node name="Level 5 button" type="Button" parent="Node" unique_id=759049986]
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
 offset_left = 1037.0
@@ -212,6 +374,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "LEVEL 5"
 
 [node name="Returnbutton" type="Button" parent="Node" unique_id=1317990257]
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
 offset_left = 777.0
@@ -229,5 +392,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "RETURN"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1875883231]
+libraries/ = SubResource("AnimationLibrary_uotyi")
+autoplay = &"level_animation"
 
 [connection signal="pressed" from="Node/Returnbutton" to="." method="_on_returnbutton_pressed"]

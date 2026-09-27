@@ -27,15 +27,17 @@ func _input(event: InputEvent) -> void:
 		elif event.keycode == KEY_E:
 			attack_label.text = "ATTACK"
 
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			attack_label.text = "ATTACK ALSO"
-
 		elif event.keycode == KEY_SHIFT:
 			attack_label.text = "DASH"
 
 		elif event.keycode == KEY_ESCAPE:
 			attack_label.text = "PAUSE"
+
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			attack_label.text = "ATTACK ALSO"
+
+
 
 func _on_a_button_pressed() -> void:
 	direction_label.text = "LEFT"
@@ -72,3 +74,4 @@ func _on_escape_button_pressed() -> void:
 
 func _on_return_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	Transition.change_scene("res://Scenes/main_menu.tscn")

@@ -130,39 +130,84 @@ offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label2" type="Label" parent="." unique_id=1807788113]
+[node name="PanelLabels" type="Node" parent="." unique_id=1051652335]
+
+[node name="ATTACK" type="Label" parent="PanelLabels" unique_id=504344642]
 texture_filter = 1
-layout_mode = 0
-offset_left = 529.0
-offset_top = 272.0
-offset_right = 1179.0
-offset_bottom = 309.0
+offset_left = 520.0
+offset_top = 455.0
+offset_right = 1170.0
+offset_bottom = 497.0
 theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
 theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("3_dlnx3")
-theme_override_font_sizes/font_size = 35
-text = "MOVEMENT"
+theme_override_font_sizes/font_size = 40
+text = "ATTACK"
 
-[node name="AButton" type="Button" parent="." unique_id=1969978054]
-layout_mode = 0
-offset_left = 1016.0
-offset_top = 287.0
-offset_right = 1069.0
-offset_bottom = 343.0
+[node name="DASH" type="Label" parent="PanelLabels" unique_id=1374605140]
+texture_filter = 1
+offset_left = 520.0
+offset_top = 534.0
+offset_right = 1170.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("3_dlnx3")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
-theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
-text = "A"
+text = "DASH"
 
-[node name="DButton" type="Button" parent="." unique_id=1814743495]
-layout_mode = 0
-offset_left = 1087.0
+[node name="PAUSE" type="Label" parent="PanelLabels" unique_id=295120979]
+texture_filter = 1
+offset_left = 520.0
+offset_top = 604.0
+offset_right = 1170.0
+offset_bottom = 646.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+text = "PAUSE"
+
+[node name="MOVEMENT" type="Label" parent="PanelLabels" unique_id=1807788113]
+texture_filter = 1
+offset_left = 521.0
+offset_top = 294.0
+offset_right = 1171.0
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+text = "MOVEMENT"
+
+[node name="JUMP" type="Label" parent="PanelLabels" unique_id=689128421]
+texture_filter = 1
+offset_left = 521.0
+offset_top = 376.0
+offset_right = 1171.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+text = "JUMP"
+
+[node name="PanelButtons" type="Node" parent="." unique_id=992253715]
+
+[node name="DButton" type="Button" parent="PanelButtons" unique_id=1814743495]
+texture_filter = 1
+offset_left = 1153.0
 offset_top = 287.0
-offset_right = 1140.0
+offset_right = 1206.0
 offset_bottom = 343.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("3_dlnx3")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
@@ -170,7 +215,162 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "D"
 
+[node name="WButton" type="Button" parent="PanelButtons" unique_id=394599781]
+texture_filter = 1
+offset_left = 1076.0
+offset_top = 369.0
+offset_right = 1129.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "W"
+
+[node name="AButton" type="Button" parent="PanelButtons" unique_id=1969978054]
+texture_filter = 1
+offset_left = 1076.0
+offset_top = 287.0
+offset_right = 1129.0
+offset_bottom = 343.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "A"
+
+[node name="SpaceButton" type="Button" parent="PanelButtons" unique_id=1981422023]
+texture_filter = 1
+offset_left = 1145.0
+offset_top = 368.0
+offset_right = 1252.0
+offset_bottom = 427.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "SPACE"
+
+[node name="ShiftButton" type="Button" parent="PanelButtons" unique_id=935286018]
+texture_filter = 1
+offset_left = 1095.0
+offset_top = 525.0
+offset_right = 1202.0
+offset_bottom = 584.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "SHIFT"
+
+[node name="EscapeButton" type="Button" parent="PanelButtons" unique_id=836644976]
+texture_filter = 1
+offset_left = 1095.0
+offset_top = 596.0
+offset_right = 1202.0
+offset_bottom = 655.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "ESC"
+
+[node name="ReturnButton" type="Button" parent="PanelButtons" unique_id=651827020]
+texture_filter = 1
+offset_left = 826.0
+offset_top = 680.0
+offset_right = 982.0
+offset_bottom = 753.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "RETURN"
+
+[node name="EButton" type="Button" parent="PanelButtons" unique_id=824399352]
+texture_filter = 1
+offset_left = 1077.0
+offset_top = 449.0
+offset_right = 1130.0
+offset_bottom = 505.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "E"
+
+[node name="L_M_BButton" type="Button" parent="PanelButtons" unique_id=1209368902]
+texture_filter = 1
+offset_left = 1147.0
+offset_top = 450.0
+offset_right = 1244.0
+offset_bottom = 504.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "L.M.B"
+
+[node name="DashLabel" type="Label" parent="." unique_id=1824131021]
+texture_filter = 1
+layout_mode = 0
+offset_left = 656.0
+offset_top = 527.0
+offset_right = 1046.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 57
+text = "PRESS SHIFT"
+
+[node name="JumpLabel" type="Label" parent="." unique_id=1186738489]
+texture_filter = 1
+layout_mode = 0
+offset_left = 658.0
+offset_top = 367.0
+offset_right = 1048.0
+offset_bottom = 427.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 57
+text = "PRESS W OR SPACE"
+
 [node name="DirectionLabel" type="Label" parent="." unique_id=1393431407]
+texture_filter = 1
 layout_mode = 0
 offset_left = 712.0
 offset_top = 287.0
@@ -182,5 +382,38 @@ theme_override_fonts/font = ExtResource("3_dlnx3")
 theme_override_font_sizes/font_size = 57
 text = "PRESS A OR D"
 
-[connection signal="pressed" from="AButton" to="." method="_on_a_button_pressed"]
-[connection signal="pressed" from="DButton" to="." method="_on_d_button_pressed"]
+[node name="AttackLabel" type="Label" parent="." unique_id=192594420]
+texture_filter = 1
+layout_mode = 0
+offset_left = 656.0
+offset_top = 447.0
+offset_right = 1046.0
+offset_bottom = 507.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 57
+text = "PRESS E OR L.M.B"
+
+[node name="PauseLabel" type="Label" parent="." unique_id=2043187248]
+texture_filter = 1
+layout_mode = 0
+offset_left = 656.0
+offset_top = 597.0
+offset_right = 1046.0
+offset_bottom = 657.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_fonts/font = ExtResource("3_dlnx3")
+theme_override_font_sizes/font_size = 57
+text = "PRESS SHIFT"
+
+[connection signal="pressed" from="PanelButtons/DButton" to="." method="_on_d_button_pressed"]
+[connection signal="pressed" from="PanelButtons/WButton" to="." method="_on_w_button_pressed"]
+[connection signal="pressed" from="PanelButtons/AButton" to="." method="_on_a_button_pressed"]
+[connection signal="pressed" from="PanelButtons/SpaceButton" to="." method="_on_space_button_pressed"]
+[connection signal="pressed" from="PanelButtons/ShiftButton" to="." method="_on_shift_button_pressed"]
+[connection signal="pressed" from="PanelButtons/EscapeButton" to="." method="_on_escape_button_pressed"]
+[connection signal="pressed" from="PanelButtons/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="PanelButtons/EButton" to="." method="_on_e_button_pressed"]
+[connection signal="pressed" from="PanelButtons/L_M_BButton" to="." method="_on_l_m_b_button_pressed"]

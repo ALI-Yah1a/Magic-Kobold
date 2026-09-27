@@ -64,6 +64,163 @@ region = Rect2(95.81601, 0, 96.18399, 95.72667)
 atlas = ExtResource("2_1ehe0")
 region = Rect2(95.89868, 0, 96.10132, 95.456924)
 
+[sub_resource type="Animation" id="Animation_n45e2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuPanel/Game Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuPanel/Newgamebutton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuPanel/OptionsButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MenuPanel/HowToPlayButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MenuPanel/CreditsButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuPanel/QuitButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_opfnp"]
+resource_name = "menu-intro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuPanel/Game Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuPanel/Newgamebutton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuPanel/OptionsButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MenuPanel/HowToPlayButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MenuPanel/CreditsButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuPanel/QuitButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cp0ys"]
+_data = {
+&"RESET": SubResource("Animation_n45e2"),
+&"menu-intro": SubResource("Animation_opfnp")
+}
+
 [node name="Main menu" type="Control" unique_id=471841265]
 layout_mode = 3
 anchors_preset = 15
@@ -124,6 +281,7 @@ texture = SubResource("AtlasTexture_bg1du")
 metadata/_edit_use_anchors_ = true
 
 [node name="Newgamebutton" type="Button" parent="MenuPanel" unique_id=374904299]
+modulate = Color(1, 1, 1, 0)
 z_index = 2
 texture_filter = 1
 layout_mode = 1
@@ -147,6 +305,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "NEW GAME"
 
 [node name="OptionsButton" type="Button" parent="MenuPanel" unique_id=978773387]
+modulate = Color(1, 1, 1, 0)
 z_index = 2
 texture_filter = 1
 layout_mode = 1
@@ -170,6 +329,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "OPTIONS"
 
 [node name="QuitButton" type="Button" parent="MenuPanel" unique_id=863832854]
+modulate = Color(1, 1, 1, 0)
 z_index = 2
 texture_filter = 1
 layout_mode = 1
@@ -193,6 +353,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "QUIT"
 
 [node name="CreditsButton" type="Button" parent="MenuPanel" unique_id=2143023080]
+modulate = Color(1, 1, 1, 0)
 z_index = 2
 texture_filter = 1
 layout_mode = 1
@@ -217,6 +378,7 @@ text = "CREDITS
 "
 
 [node name="HowToPlayButton" type="Button" parent="MenuPanel" unique_id=813216076]
+modulate = Color(1, 1, 1, 0)
 z_index = 2
 texture_filter = 1
 layout_mode = 1
@@ -240,6 +402,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "HOW TO PLAY"
 
 [node name="Game Title" type="Label" parent="MenuPanel" unique_id=1614465687]
+modulate = Color(1, 1, 1, 0)
 z_index = 2
 texture_filter = 1
 layout_mode = 1
@@ -503,6 +666,10 @@ theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 32
 text = "His adventure has only just begun..."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1838823037]
+libraries/ = SubResource("AnimationLibrary_cp0ys")
+autoplay = &"menu-intro"
 
 [connection signal="pressed" from="MenuPanel/Newgamebutton" to="." method="_on_newgamebutton_pressed"]
 [connection signal="pressed" from="MenuPanel/OptionsButton" to="." method="_on_options_button_pressed"]

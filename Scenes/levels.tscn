@@ -211,7 +211,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "LEVEL 5"
 
-[node name="Backbutton" type="Button" parent="Node" unique_id=1317990257]
+[node name="Returnbutton" type="Button" parent="Node" unique_id=1317990257]
 z_index = 1
 texture_filter = 1
 offset_left = 777.0
@@ -228,6 +228,6 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
-text = "BACK"
+text = "RETURN"
 
-[connection signal="pressed" from="Node/Backbutton" to="." method="_on_backbutton_pressed"]
+[connection signal="pressed" from="Node/Returnbutton" to="." method="_on_returnbutton_pressed"]

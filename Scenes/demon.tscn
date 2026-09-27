@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://kjwfbqey26lb"]
+
+[ext_resource type="Script" uid="uid://xamuo60looa6" path="res://Scenes/demon.gd" id="1_58f26"]
+[ext_resource type="Texture2D" uid="uid://rsm1qo50gt16" path="res://Assets/Monsters/demon/Attack1.png" id="2_58f26"]
+[ext_resource type="Texture2D" uid="uid://dgamtip0rvby6" path="res://Assets/Monsters/demon/Attack2.png" id="3_sg7bd"]
+[ext_resource type="Texture2D" uid="uid://b75v1q32txkja" path="res://Assets/Monsters/demon/Attack3.png" id="4_16v5a"]
+[ext_resource type="Texture2D" uid="uid://crg1vwbfa6hkx" path="res://Assets/Monsters/demon/Attack4.png" id="5_auhfo"]
+[ext_resource type="Texture2D" uid="uid://3uom1wd2tmad" path="res://Assets/Monsters/demon/Death1.png" id="6_lijeg"]
+[ext_resource type="Texture2D" uid="uid://dab7o78g864te" path="res://Assets/Monsters/demon/Death2.png" id="7_cbkay"]
+[ext_resource type="Texture2D" uid="uid://cbhuyoob0vo3u" path="res://Assets/Monsters/demon/Death3.png" id="8_ggmht"]
+[ext_resource type="Texture2D" uid="uid://c6fvigvvvamyn" path="res://Assets/Monsters/demon/Death4.png" id="9_e1rxs"]
+[ext_resource type="Texture2D" uid="uid://dy7gnbsuuo5ph" path="res://Assets/Monsters/demon/Death5.png" id="10_ktygg"]
+[ext_resource type="Texture2D" uid="uid://7gd3c5tle7g2" path="res://Assets/Monsters/demon/Death6.png" id="11_gwral"]
+[ext_resource type="Texture2D" uid="uid://fvj1nenow8ob" path="res://Assets/Monsters/demon/Hurt1.png" id="12_ggv8w"]
+[ext_resource type="Texture2D" uid="uid://ddk58dorckcih" path="res://Assets/Monsters/demon/Hurt2.png" id="13_be5kv"]
+[ext_resource type="Texture2D" uid="uid://dox1ygvwcqrqh" path="res://Assets/Monsters/demon/Idle1.png" id="14_vsbin"]
+[ext_resource type="Texture2D" uid="uid://dhdxf03yx802c" path="res://Assets/Monsters/demon/Idle2.png" id="15_ct3in"]
+[ext_resource type="Texture2D" uid="uid://s7srcj7wcnow" path="res://Assets/Monsters/demon/Idle3.png" id="16_f7hf5"]
+[ext_resource type="Texture2D" uid="uid://bypes3dmm6mki" path="res://Assets/Monsters/demon/Walk1.png" id="17_r1bff"]
+[ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="18_egpq0"]
+[ext_resource type="Texture2D" uid="uid://dxxy7ctdoxhej" path="res://Assets/Monsters/demon/Walk2.png" id="18_tc1ta"]
+[ext_resource type="Texture2D" uid="uid://k5vteuv5glda" path="res://Assets/Monsters/demon/Walk3.png" id="19_51xpb"]
+[ext_resource type="Texture2D" uid="uid://dosj32n7eu6xk" path="res://Assets/Monsters/demon/Walk4.png" id="20_o8p3e"]
+[ext_resource type="Texture2D" uid="uid://b6efkutoikxg6" path="res://Assets/Monsters/demon/Walk5.png" id="21_8yxkd"]
+[ext_resource type="Texture2D" uid="uid://cwsm1s3k1p0lu" path="res://Assets/Monsters/demon/Walk6.png" id="22_kmogj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t76eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_58f26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sg7bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_16v5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_auhfo")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_lijeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cbkay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ggmht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_e1rxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ktygg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gwral")
+}],
+"loop": 0,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ggv8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_be5kv")
+}],
+"loop": 1,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_vsbin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ct3in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_f7hf5")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_r1bff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tc1ta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_51xpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_o8p3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8yxkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kmogj")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_475lp"]
+radius = 26.0
+height = 88.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlvfx"]
+atlas = ExtResource("18_egpq0")
+region = Rect2(197, 135, 86, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cipvd"]
+atlas = ExtResource("18_egpq0")
+region = Rect2(199, 176, 82, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwqab"]
+size = Vector2(452, 96)
+
+[node name="Demon" type="CharacterBody2D" unique_id=1916248942 groups=["Enemy"]]
+script = ExtResource("1_58f26")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1046993187]
+sprite_frames = SubResource("SpriteFrames_t76eq")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1013602296]
+position = Vector2(-34, 14)
+shape = SubResource("CapsuleShape2D_475lp")
+
+[node name="GroundRay" type="RayCast2D" parent="." unique_id=1690048232]
+position = Vector2(2, 7)
+target_position = Vector2(-1, 57)
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1394816969]
+offset_left = -65.99999
+offset_top = -46.0
+offset_right = 20.000008
+offset_bottom = -6.0
+scale = Vector2(0.7, 0.7)
+value = 100.0
+texture_under = SubResource("AtlasTexture_mlvfx")
+texture_progress = SubResource("AtlasTexture_cipvd")
+texture_progress_offset = Vector2(2, 9)
+metadata/_edit_use_anchors_ = true
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=974975194]
+position = Vector2(-12, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=933119430]
+position = Vector2(-16, 9)
+shape = SubResource("RectangleShape2D_iwqab")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

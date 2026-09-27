@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cyd1cukjkw3vs"]
+
+[ext_resource type="Script" uid="uid://cv0p3eueqkvio" path="res://Scripts/medusa_stone.gd" id="1_ppe2y"]
+[ext_resource type="Texture2D" uid="uid://bf6lvhahdvoia" path="res://Assets/Monsters/medusa/Stone1.png" id="1_qwh8l"]
+[ext_resource type="Texture2D" uid="uid://bhq080l2tt5o8" path="res://Assets/Monsters/medusa/Stone2.png" id="2_ppe2y"]
+[ext_resource type="Texture2D" uid="uid://cbe4bawunew05" path="res://Assets/Monsters/medusa/Stone3.png" id="3_4ygee"]
+[ext_resource type="Texture2D" uid="uid://dn64lgb5e6r3b" path="res://Assets/Monsters/medusa/Stone4.png" id="4_hkfpj"]
+[ext_resource type="Texture2D" uid="uid://baw6i7kbur5kk" path="res://Assets/Monsters/medusa/Stone5.png" id="5_ndw25"]
+[ext_resource type="Texture2D" uid="uid://qa2wpfx0w3gd" path="res://Assets/Monsters/medusa/Stone6.png" id="6_alx1i"]
+[ext_resource type="Texture2D" uid="uid://dtgmu8utcrrh7" path="res://Assets/Monsters/medusa/Stone7.png" id="7_8t3le"]
+[ext_resource type="Texture2D" uid="uid://hmsjm7k5n2b1" path="res://Assets/Monsters/medusa/Stone8.png" id="8_4e1vd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t76eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qwh8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ppe2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4ygee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hkfpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ndw25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_alx1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8t3le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4e1vd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_esyny"]
+radius = 33.01515
+
+[node name="MedusaStone" type="Area2D" unique_id=479745317]
+script = ExtResource("1_ppe2y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1384018739]
+sprite_frames = SubResource("SpriteFrames_t76eq")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1925249075]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_esyny")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

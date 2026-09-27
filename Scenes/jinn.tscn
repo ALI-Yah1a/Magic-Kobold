@@ -123,6 +123,7 @@ region = Rect2(199, 176, 82, 4)
 size = Vector2(370, 64)
 
 [node name="Jinn" type="CharacterBody2D" unique_id=1666029679 groups=["Enemy"]]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_qfxe2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=608986678]

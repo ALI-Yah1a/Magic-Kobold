@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://civpp4sv5xlg5"]
+
+[ext_resource type="Texture2D" uid="uid://blcs7sm48t1fa" path="res://Assets/Monsters/BlackArrow.png" id="1_2k7kp"]
+
+[node name="Indicator" type="Sprite2D" unique_id=900436950]
+position = Vector2(0, -2)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_2k7kp")

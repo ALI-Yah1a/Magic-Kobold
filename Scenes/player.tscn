@@ -366,7 +366,7 @@ height = 32.0
 size = Vector2(28.5, 32.375)
 
 [node name="Player" type="CharacterBody2D" unique_id=2019291134 groups=["player"]]
-scale = Vector2(2, 2)
+scale = Vector2(1.6, 1.6)
 script = ExtResource("1_pukcj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1209423592]

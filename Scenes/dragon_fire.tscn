@@ -38,7 +38,7 @@ animations = [{
 size = Vector2(79.5, 48.5)
 
 [node name="DragonFire" type="Area2D" unique_id=479745317]
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_nl2ux")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=507960586]

@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://df3fl8r7u6qo3"
 [autoload]
 
 AudioStreamPlayerGlobal="*uid://cpn0t7v2le7c5"
+Transition="*uid://ds58xdw6gowqu"
 
 [display]
 

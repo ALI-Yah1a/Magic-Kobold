@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dhyoiv8jsnvms"]
+
+[ext_resource type="Texture2D" uid="uid://k6nsddqw8x8b" path="res://Assets/Tileset/Background/props.png" id="1_okrnj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t76eq"]
+atlas = ExtResource("1_okrnj")
+region = Rect2(318, 20, 87, 108)
+
+[node name="House" type="Sprite2D" unique_id=1623140847]
+z_index = -1
+texture = SubResource("AtlasTexture_t76eq")

@@ -132,6 +132,7 @@ region = Rect2(199, 176, 82, 4)
 size = Vector2(370, 64)
 
 [node name="Medusa" type="CharacterBody2D" unique_id=532436669 groups=["Enemy"]]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_6op67")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=472444814]

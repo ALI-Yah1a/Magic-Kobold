@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6ns38r0r5lwd"]
 
 [ext_resource type="Script" uid="uid://c7srjwyktxdcj" path="res://Scenes/levels.gd" id="1_3akqy"]
-[ext_resource type="Shader" uid="uid://cnwjc1f03hhtw" path="res://Scenes/levels.gdshader" id="1_xgx5e"]
+[ext_resource type="Shader" uid="uid://bsln354t5e52d" path="res://Scenes/levels.gdshader" id="1_xgx5e"]
 [ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="1_yh33m"]
 [ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="3_uusmb"]
 
@@ -125,6 +125,310 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Level 5 button:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(915, 514)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Level 2 button:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(639, 510)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Returnbutton:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(777, 622)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Level 3 button:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(775, 389)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Level 1 button:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(656, 238)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Level 4 button:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(896, 243)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Level1Popup:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(652, 616)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Level1Popup:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Level2Popup:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(652, 623)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Level2Popup:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Level3Popup:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(652, 625)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Level3Popup:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Level4Popup:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(652, 648)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Level4Popup:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Level5Popup:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(652, 660)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Level5Popup:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p1uqq"]
+resource_name = "level_2_popup_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level2Popup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(652, 623), Vector2(652, 370)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level2Popup:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j0k6p"]
+resource_name = "level_3_popup_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level3Popup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(652, 625), Vector2(652, 370)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level3Popup:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bku7o"]
+resource_name = "level_4_popup_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level4Popup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(652, 648), Vector2(652, 370)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level4Popup:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_c4nq2"]
+resource_name = "level_5_popular_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level5Popup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(652, 660), Vector2(652, 370)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level5Popup:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_jk88k"]
 resource_name = "level_animation"
@@ -136,7 +440,7 @@ tracks/0/path = NodePath("Node/Level 1 button:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.3),
+"times": PackedFloat32Array(0, 3.6666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -148,7 +452,7 @@ tracks/1/path = NodePath("Node/Level 2 button:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 3.6666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -160,7 +464,7 @@ tracks/2/path = NodePath("Node/Level 3 button:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 3.6666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -184,7 +488,7 @@ tracks/4/path = NodePath("Node/Level 5 button:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 4.0666666),
+"times": PackedFloat32Array(0, 3.6666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -196,7 +500,106 @@ tracks/5/path = NodePath("Node/Returnbutton:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 4.5333333),
+"times": PackedFloat32Array(0, 3.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node/Level 5 button:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(915, 514), Vector2(1037, 514)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node/Level 2 button:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 3.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(639, 510), Vector2(508, 510)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node/Returnbutton:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 3.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(777, 622), Vector2(777, 697)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node/Level 3 button:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 3.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(775, 389), Vector2(775, 273)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node/Level 1 button:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 3.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(656, 238), Vector2(387, 238)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node/Level 4 button:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 3.6667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(896, 243), Vector2(1165, 243)]
+}
+
+[sub_resource type="Animation" id="Animation_uotyi"]
+resource_name = "level_popup_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level1Popup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(652, 616), Vector2(652, 370)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level1Popup:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -205,8 +608,61 @@ tracks/5/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uotyi"]
 _data = {
 &"RESET": SubResource("Animation_3akqy"),
-&"level_animation": SubResource("Animation_jk88k")
+&"level_2_popup_in": SubResource("Animation_p1uqq"),
+&"level_3_popup_in": SubResource("Animation_j0k6p"),
+&"level_4_popup_in": SubResource("Animation_bku7o"),
+&"level_5_popular_in": SubResource("Animation_c4nq2"),
+&"level_animation": SubResource("Animation_jk88k"),
+&"level_popup_in": SubResource("Animation_uotyi")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.0627451, 0.09411765, 0.1254902, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(0.09411765, 0.17254902, 0.25882354, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opfnp"]
+bg_color = Color(0.0627451, 0.1254902, 0.2, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9490196, 0.78039217, 0.36078432, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
+bg_color = Color(0.14509805, 0.27058825, 0.3882353, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.84313726, 0.8235294, 0.15294118, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Levels" type="Control" unique_id=1532406671]
 layout_mode = 3
@@ -277,9 +733,9 @@ vertical_alignment = 2
 modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
-offset_left = 387.0
+offset_left = 656.0
 offset_top = 238.0
-offset_right = 607.0
+offset_right = 875.9997
 offset_bottom = 338.0
 theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
 theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
@@ -297,9 +753,9 @@ text = "LEVEL 1"
 modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
-offset_left = 508.0
+offset_left = 639.0
 offset_top = 510.0
-offset_right = 728.0
+offset_right = 858.99994
 offset_bottom = 610.0
 theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
 theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
@@ -318,9 +774,9 @@ modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
 offset_left = 775.0
-offset_top = 273.0
+offset_top = 389.0
 offset_right = 995.0
-offset_bottom = 373.0
+offset_bottom = 489.0
 theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
 theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
 theme_override_colors/font_hover_color = Color(1, 0.94509804, 0.78039217, 1)
@@ -337,9 +793,9 @@ text = "LEVEL 3"
 modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
-offset_left = 1165.0
+offset_left = 896.0
 offset_top = 243.0
-offset_right = 1385.0
+offset_right = 1116.0
 offset_bottom = 343.0
 theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
 theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
@@ -357,9 +813,9 @@ text = "LEVEL 4"
 modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
-offset_left = 1037.0
+offset_left = 915.0
 offset_top = 514.0
-offset_right = 1257.0
+offset_right = 1135.0028
 offset_bottom = 614.0
 theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
 theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
@@ -378,9 +834,9 @@ modulate = Color(1, 1, 1, 0)
 z_index = 1
 texture_filter = 1
 offset_left = 777.0
-offset_top = 697.0
+offset_top = 622.0
 offset_right = 997.0
-offset_bottom = 797.0
+offset_bottom = 722.0
 theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
 theme_override_colors/font_pressed_color = Color(0.8862745, 0.7607843, 0.47843137, 1)
 theme_override_colors/font_hover_color = Color(1, 0.94509804, 0.78039217, 1)
@@ -397,10 +853,565 @@ text = "RETURN"
 libraries/ = SubResource("AnimationLibrary_uotyi")
 autoplay = &"level_animation"
 
+[node name="QuitFade" type="ColorRect" parent="." unique_id=1398927076]
+visible = false
+z_index = 9
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="LevelProgress" type="HBoxContainer" parent="." unique_id=427867223]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1480.0
+offset_top = -956.0
+offset_right = -106.0
+offset_bottom = -883.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Dot1" type="Label" parent="LevelProgress" unique_id=1298680272]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+theme_override_font_sizes/font_size = 52
+text = "●"
+
+[node name="Dot2" type="Label" parent="LevelProgress" unique_id=1715841421]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "○"
+
+[node name="Dot3" type="Label" parent="LevelProgress" unique_id=1401941882]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "○"
+
+[node name="Dot4" type="Label" parent="LevelProgress" unique_id=1907357602]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "○"
+
+[node name="Dot5" type="Label" parent="LevelProgress" unique_id=1525351840]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "○"
+
+[node name="LevelCounter" type="Label" parent="." unique_id=1952970172]
+layout_mode = 0
+offset_left = 1513.0
+offset_top = 116.0
+offset_right = 1764.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0.95686275, 0.8901961, 0.69803923, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 49
+text = "LEVEL 01 / 05"
+
+[node name="Level1Popup" type="Panel" parent="." unique_id=535344026]
+visible = false
+z_index = 10
+layout_mode = 0
+offset_left = 652.0
+offset_top = 616.0
+offset_right = 1152.0
+offset_bottom = 896.00183
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="LevelName" type="Label" parent="Level1Popup" unique_id=622330379]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 13.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 37
+text = "Whispering Woods"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyTitle" type="Label" parent="Level1Popup" unique_id=2132469287]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -80.5
+offset_right = -88.0
+offset_bottom = -41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 35
+text = "DIFFICULTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyStars" type="Label" parent="Level1Popup" unique_id=2068118340]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 77.0
+offset_right = 421.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_font_sizes/font_size = 31
+text = "★☆☆☆☆"
+
+[node name="Back1Button" type="Button" parent="Level1Popup" unique_id=1088120340]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 154.0
+offset_right = 410.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "BACK"
+
+[node name="EnterButton" type="Button" parent="Level1Popup" unique_id=1503595324]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 154.0
+offset_right = 216.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "ENTER"
+
+[node name="Level2Popup" type="Panel" parent="." unique_id=407893707]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+layout_mode = 0
+offset_left = 652.0
+offset_top = 623.0
+offset_right = 1152.0
+offset_bottom = 903.0004
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="LevelName" type="Label" parent="Level2Popup" unique_id=721061330]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 13.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 37
+text = "Sunken Ruins of Kel'Dahr"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyTitle" type="Label" parent="Level2Popup" unique_id=638515242]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -80.5
+offset_right = -88.0
+offset_bottom = -41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 35
+text = "DIFFICULTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyStars" type="Label" parent="Level2Popup" unique_id=1484413195]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 77.0
+offset_right = 421.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_font_sizes/font_size = 31
+text = "★★☆☆☆"
+
+[node name="Back2Button" type="Button" parent="Level2Popup" unique_id=513025283]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 154.0
+offset_right = 410.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "BACK"
+
+[node name="EnterButton" type="Button" parent="Level2Popup" unique_id=775774312]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 154.0
+offset_right = 216.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "ENTER"
+
+[node name="Level3Popup" type="Panel" parent="." unique_id=769085595]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+layout_mode = 0
+offset_left = 652.0
+offset_top = 625.0
+offset_right = 1152.0
+offset_bottom = 905.0003
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="LevelName" type="Label" parent="Level3Popup" unique_id=34408901]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 13.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 37
+text = "Echoing Caverns"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyTitle" type="Label" parent="Level3Popup" unique_id=1962416156]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -80.5
+offset_right = -88.0
+offset_bottom = -41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 35
+text = "DIFFICULTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyStars" type="Label" parent="Level3Popup" unique_id=811069642]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 77.0
+offset_right = 421.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_font_sizes/font_size = 31
+text = "★★★☆☆"
+
+[node name="Back3Button" type="Button" parent="Level3Popup" unique_id=918064282]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 154.0
+offset_right = 410.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "BACK"
+
+[node name="EnterButton" type="Button" parent="Level3Popup" unique_id=256353944]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 154.0
+offset_right = 216.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "ENTER"
+
+[node name="Level4Popup" type="Panel" parent="." unique_id=1958625468]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+layout_mode = 0
+offset_left = 652.0
+offset_top = 648.0
+offset_right = 1152.0
+offset_bottom = 928.00073
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="LevelName" type="Label" parent="Level4Popup" unique_id=533021112]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 13.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 37
+text = "The Obsidian Citadel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyTitle" type="Label" parent="Level4Popup" unique_id=1421486207]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -80.5
+offset_right = -88.0
+offset_bottom = -41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 35
+text = "DIFFICULTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyStars" type="Label" parent="Level4Popup" unique_id=389489645]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 77.0
+offset_right = 421.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_font_sizes/font_size = 31
+text = "★★★★☆"
+
+[node name="Back4Button" type="Button" parent="Level4Popup" unique_id=1028576038]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 154.0
+offset_right = 410.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "BACK"
+
+[node name="EnterButton" type="Button" parent="Level4Popup" unique_id=619560263]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 154.0
+offset_right = 216.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "ENTER"
+
+[node name="Level5Popup" type="Panel" parent="." unique_id=1990995480]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+layout_mode = 0
+offset_left = 652.0
+offset_top = 660.0
+offset_right = 1152.0
+offset_bottom = 940.0007
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="LevelName" type="Label" parent="Level5Popup" unique_id=1546529442]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 13.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 37
+text = "Peak of the Eclipse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyTitle" type="Label" parent="Level5Popup" unique_id=1258739046]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -80.5
+offset_right = -88.0
+offset_bottom = -41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 35
+text = "DIFFICULTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultyStars" type="Label" parent="Level5Popup" unique_id=1836845161]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 77.0
+offset_right = 421.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.95686275, 0.8352941, 0.5411765, 1)
+theme_override_colors/font_shadow_color = Color(0.14117648, 0.101960786, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.2784314, 0.14117648, 1)
+theme_override_font_sizes/font_size = 31
+text = "★★★★★"
+
+[node name="Back5Button" type="Button" parent="Level5Popup" unique_id=466894985]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 154.0
+offset_right = 410.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "BACK"
+
+[node name="EnterButton" type="Button" parent="Level5Popup" unique_id=650667320]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 154.0
+offset_right = 216.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("3_uusmb")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
+text = "ENTER"
+
 [connection signal="pressed" from="Node/Level 1 button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="Node/Level 2 button" to="." method="_on_level_2_button_pressed"]
 [connection signal="pressed" from="Node/Level 3 button" to="." method="_on_level_3_button_pressed"]
 [connection signal="pressed" from="Node/Level 4 button" to="." method="_on_level_4_button_pressed"]
 [connection signal="pressed" from="Node/Level 5 button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="Node/Returnbutton" to="." method="_on_returnbutton_pressed"]
-[connection signal="pressed" from="Node/Backbutton" to="." method="_on_backbutton_pressed"]
+[connection signal="pressed" from="Level1Popup/Back1Button" to="." method="_on_back_1_button_pressed"]
+[connection signal="pressed" from="Level2Popup/Back2Button" to="." method="_on_back_2_button_pressed"]
+[connection signal="pressed" from="Level3Popup/Back3Button" to="." method="_on_back_3_button_pressed"]
+[connection signal="pressed" from="Level4Popup/Back4Button" to="." method="_on_back_4_button_pressed"]
+[connection signal="pressed" from="Level5Popup/Back5Button" to="." method="_on_back_5_button_pressed"]

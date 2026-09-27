@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://yg8tb2057osi" path="res://Scenes/coin.tscn" id="3_evi0p"]
 [ext_resource type="PackedScene" uid="uid://ct66afrbjw0q6" path="res://Scenes/medusa.tscn" id="5_lsmp6"]
 [ext_resource type="Texture2D" uid="uid://cbslfdhgpdng8" path="res://Assets/Tileset/Background/Background.png" id="6_evi0p"]
+[ext_resource type="PackedScene" uid="uid://c3j5p0u2nnns2" path="res://Scenes/jinn.tscn" id="6_wrinw"]
+[ext_resource type="PackedScene" uid="uid://kjwfbqey26lb" path="res://Scenes/demon.tscn" id="7_chwpn"]
+[ext_resource type="PackedScene" uid="uid://dun1abdc8ienw" path="res://Scenes/dragon.tscn" id="8_af3po"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lsmp6"]
 texture = ExtResource("1_evi0p")
@@ -333,16 +336,12 @@ required_monsters = 4
 visible = false
 
 [node name="Medusa" parent="Enemies" unique_id=532436669 instance=ExtResource("5_lsmp6")]
-position = Vector2(-75, -225)
 
-[node name="Medusa2" parent="Enemies" unique_id=2109295451 instance=ExtResource("5_lsmp6")]
-position = Vector2(112, 180)
+[node name="Jinn" parent="Enemies" unique_id=1666029679 instance=ExtResource("6_wrinw")]
 
-[node name="Medusa3" parent="Enemies" unique_id=156263333 instance=ExtResource("5_lsmp6")]
-position = Vector2(1125, -7)
+[node name="Demon" parent="Enemies" unique_id=1916248942 instance=ExtResource("7_chwpn")]
 
-[node name="Medusa4" parent="Enemies" unique_id=1735739700 instance=ExtResource("5_lsmp6")]
-position = Vector2(1173, 183)
+[node name="Dragon" parent="Enemies" unique_id=537647056 instance=ExtResource("8_af3po")]
 
 [node name="Background" type="Node2D" parent="." unique_id=1564995026]
 

@@ -1,4 +1,5 @@
 extends Control
+@onready var animation_player = $AnimationPlayer
 
 
 
@@ -22,6 +23,9 @@ func _on_options_button_pressed() -> void:
 func _on_quit_button_pressed() -> void:
 	$QuitPopup.show()
 	AudioManager.play_click()
+	$QuitFade.show()
+	$AnimationPlayer.play("QuitPopup")
+	
 
 func _on_how_to_play_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/how_to_play.tscn")
@@ -31,6 +35,7 @@ func _on_how_to_play_button_pressed() -> void:
 func _on_no_button_pressed() -> void:
 	$QuitPopup.hide()
 	AudioManager.play_click()
+	$QuitFade.hide()
 
 func _on_yes_button_pressed() -> void:
 	get_tree().quit()

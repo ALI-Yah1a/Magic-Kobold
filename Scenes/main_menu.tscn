@@ -64,6 +64,34 @@ region = Rect2(95.81601, 0, 96.18399, 95.72667)
 atlas = ExtResource("2_1ehe0")
 region = Rect2(95.89868, 0, 96.10132, 95.456924)
 
+[sub_resource type="Animation" id="Animation_cp0ys"]
+resource_name = "QuitPopup"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QuitPopup:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("QuitPopup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(652, 623), Vector2(652, 370)]
+}
+
 [sub_resource type="Animation" id="Animation_n45e2"]
 length = 0.001
 tracks/0/type = "value"
@@ -413,6 +441,30 @@ tracks/28/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(56.539978, 232.46402)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("QuitPopup:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("QuitPopup:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(652, 623)]
 }
 
 [sub_resource type="Animation" id="Animation_opfnp"]
@@ -769,6 +821,7 @@ tracks/28/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cp0ys"]
 _data = {
+&"QuitPopup": SubResource("Animation_cp0ys"),
 &"RESET": SubResource("Animation_n45e2"),
 &"menu-intro": SubResource("Animation_opfnp")
 }
@@ -894,7 +947,7 @@ anchor_bottom = 0.22900002
 offset_left = -179.87003
 offset_top = 72.164
 offset_right = 173.022
-offset_bottom = 148.46002
+offset_bottom = 148.46005
 theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
@@ -966,7 +1019,7 @@ anchor_bottom = 0.279
 offset_left = -180.0
 offset_top = 307.964
 offset_right = 172.89203
-offset_bottom = 384.2693
+offset_bottom = 384.27216
 theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
@@ -991,7 +1044,7 @@ anchor_bottom = 0.279
 offset_left = -179.0
 offset_top = 206.96397
 offset_right = 173.89203
-offset_bottom = 283.2522
+offset_bottom = 283.24976
 theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
@@ -1289,9 +1342,21 @@ text = "His adventure has only just begun..."
 libraries/ = SubResource("AnimationLibrary_cp0ys")
 autoplay = &"menu-intro"
 
+[node name="QuitFade" type="ColorRect" parent="." unique_id=905838383]
+visible = false
+z_index = 7
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
 [node name="QuitPopup" type="Panel" parent="." unique_id=1334844638]
 visible = false
-z_index = 3
+modulate = Color(1, 1, 1, 0)
+z_index = 9
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1300,9 +1365,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -248.0
-offset_top = -126.0
+offset_top = -130.0
 offset_right = 252.0
-offset_bottom = 154.0
+offset_bottom = 149.99988
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
@@ -1348,6 +1413,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="NoButton" type="Button" parent="QuitPopup" unique_id=1123910193]
+texture_filter = 1
 layout_mode = 0
 offset_left = 295.0
 offset_top = 163.0
@@ -1364,6 +1430,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "NO"
 
 [node name="YesButton" type="Button" parent="QuitPopup" unique_id=1223372525]
+texture_filter = 1
 layout_mode = 0
 offset_left = 100.0
 offset_top = 163.0

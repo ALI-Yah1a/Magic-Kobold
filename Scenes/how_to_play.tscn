@@ -8,6 +8,20 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_wpr6w")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lonyb"]
+bg_color = Color(0.0627451, 0.09411765, 0.1254902, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 11
+shadow_offset = Vector2(0, 7)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
 bg_color = Color(0.16078432, 0.29411766, 0.41960785, 1)
 border_width_left = 2
@@ -648,6 +662,7 @@ offset_right = 396.0
 offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lonyb")
 
 [node name="PanelLabels" type="Node" parent="." unique_id=1051652335]
 

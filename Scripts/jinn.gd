@@ -1,15 +1,15 @@
 extends CharacterBody2D
-class_name Enemy
+class_name enemy1
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var ground_ray: RayCast2D = $GroundRay
 @onready var health_bar = $HealthBar
 
-const STONE_SCENE = preload("res://Scenes/medusa_stone.tscn")
+const PROJECTILE_SCENE = preload("res://Scenes/jinn_magic.tscn") 
 var speed = 110
 var chase_speed = 130
-var attack_range = 90.0
+var attack_range = 150.0
 var attack_cooldown = 1.5
 var first_attack_delay = 0.5
 var direction = 1
@@ -79,7 +79,7 @@ func _physics_process(delta):
 				ground_ray.position.x = abs(ground_ray.position.x) 
 			else:
 				animated_sprite_2d.flip_h = true
-				animated_sprite_2d.position.x = -20
+				animated_sprite_2d.position.x = -30
 				$DetectionArea.scale.x = -1
 				ground_ray.position.x = -abs(ground_ray.position.x) 
 		else:
@@ -105,22 +105,34 @@ func start_attack():
 	
 	if animated_sprite_2d.sprite_frames.has_animation("attack"):
 		animated_sprite_2d.play("attack")
+		
 	await get_tree().create_timer(0.4).timeout 
 	
 	if is_alive:
-		throw_stone()
-	await animated_sprite_2d.animation_finished 
+		shoot_attack() 
+	await get_tree().create_timer(0.3).timeout 
 	is_attacking = false
+	animated_sprite_2d.play("idle") 
 	
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
-func throw_stone():
-	var stone = STONE_SCENE.instantiate()
-	stone.direction = -1 if animated_sprite_2d.flip_h else 1
-	var spawn_offset_x = -20 if animated_sprite_2d.flip_h else 20
-	stone.global_position = global_position + Vector2(spawn_offset_x, -10)
-	get_tree().current_scene.add_child(stone)
+func shoot_attack():
+	var projectile = PROJECTILE_SCENE.instantiate()
+	var is_facing_left = animated_sprite_2d.flip_h
+	
+	var spawn_offset_x = -30 if is_facing_left else 30
+	
+	projectile.global_position = global_position + Vector2(spawn_offset_x, -5) 
+	
+	if is_facing_left:
+		projectile.scale.x = -1
+		projectile.direction = Vector2(-1, 0) 
+	else:
+		projectile.scale.x = 1
+		projectile.direction = Vector2(1, 0) 
+		
+	get_tree().current_scene.add_child(projectile)
 
 func take_damage(amount):
 	if not is_alive or is_hurt:

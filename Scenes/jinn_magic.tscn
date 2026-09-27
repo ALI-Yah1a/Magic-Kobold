@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b5d8mbninoria"]
+
+[ext_resource type="Script" uid="uid://by45qn4l4ocam" path="res://Scripts/jinn_magic.gd" id="1_vq041"]
+[ext_resource type="Texture2D" uid="uid://dwbp5ccmorfh5" path="res://Assets/Monsters/jinn_animation/Magic_Attack1.png" id="2_vxvad"]
+[ext_resource type="Texture2D" uid="uid://ca355arrbkm1b" path="res://Assets/Monsters/jinn_animation/Magic_Attack2.png" id="3_yah1s"]
+[ext_resource type="Texture2D" uid="uid://dv4pk32i6yg51" path="res://Assets/Monsters/jinn_animation/Magic_Attack3.png" id="4_l4gfv"]
+[ext_resource type="Texture2D" uid="uid://milikemm74mp" path="res://Assets/Monsters/jinn_animation/Magic_Attack4.png" id="5_0fi2c"]
+[ext_resource type="Texture2D" uid="uid://doi0v06xjylqb" path="res://Assets/Monsters/jinn_animation/Magic_Attack5.png" id="6_0k0yb"]
+[ext_resource type="Texture2D" uid="uid://dry53apepjob7" path="res://Assets/Monsters/jinn_animation/Magic_Attack6.png" id="7_elnj2"]
+[ext_resource type="Texture2D" uid="uid://twlql523pvde" path="res://Assets/Monsters/jinn_animation/Magic_Attack7.png" id="8_pncfd"]
+[ext_resource type="Texture2D" uid="uid://llm3ikw5xlpe" path="res://Assets/Monsters/jinn_animation/Magic_Attack8.png" id="9_vagbc"]
+[ext_resource type="Texture2D" uid="uid://bc0okj1y8maoa" path="res://Assets/Monsters/jinn_animation/Magic_Attack9.png" id="10_36q8t"]
+[ext_resource type="Texture2D" uid="uid://dbo2g4tlvns4g" path="res://Assets/Monsters/jinn_animation/Magic_Attack10.png" id="11_00cp2"]
+[ext_resource type="Texture2D" uid="uid://c78y0uc0sa1qo" path="res://Assets/Monsters/jinn_animation/Magic_Attack11.png" id="12_imc3a"]
+[ext_resource type="Texture2D" uid="uid://d1fgf8bx1w7y8" path="res://Assets/Monsters/jinn_animation/Magic_Attack22.png" id="13_tflw4"]
+[ext_resource type="Texture2D" uid="uid://biu0oqf747x3r" path="res://Assets/Monsters/jinn_animation/Magic_Attack23.png" id="14_2d7mf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t76eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vxvad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yah1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l4gfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0fi2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0k0yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_elnj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pncfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vagbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_36q8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_00cp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_imc3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tflw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2d7mf")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 40.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_esyny"]
+radius = 33.01515
+
+[node name="JinnMagic" type="Area2D" unique_id=479745317]
+script = ExtResource("1_vq041")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1931018470]
+position = Vector2(-7, 0)
+sprite_frames = SubResource("SpriteFrames_t76eq")
+autoplay = "default"
+frame = 12
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1925249075]
+position = Vector2(-11, 5)
+shape = SubResource("CircleShape2D_esyny")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

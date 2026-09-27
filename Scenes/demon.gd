@@ -1,17 +1,18 @@
 extends CharacterBody2D
-class_name Enemy
+class_name enemy2
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var ground_ray: RayCast2D = $GroundRay
 @onready var health_bar = $HealthBar
 
-const STONE_SCENE = preload("res://Scenes/medusa_stone.tscn")
 var speed = 110
 var chase_speed = 130
-var attack_range = 90.0
+# تقليل المسافة لأن الهجوم بالصولجان يتطلب الاقتراب (يمكنك تعديلها حسب طول سلاحك)
+var attack_range = 60.0 
 var attack_cooldown = 1.5
 var first_attack_delay = 0.5
+var melee_damage = 10 # قيمة الضرر الذي يسببه الصولجان
 var direction = 1
 var max_hp = 2
 var current_hp = 2
@@ -72,22 +73,28 @@ func _physics_process(delta):
 	if not is_attacking and not is_hurt and not is_preparing_attack:
 		if velocity.x != 0:
 			animated_sprite_2d.play("walk")
-			if direction > 0:
-				animated_sprite_2d.flip_h = false
-				animated_sprite_2d.position.x = 0 
-				$DetectionArea.scale.x = 1
-				ground_ray.position.x = abs(ground_ray.position.x) 
-			else:
-				animated_sprite_2d.flip_h = true
-				animated_sprite_2d.position.x = -20
-				$DetectionArea.scale.x = -1
-				ground_ray.position.x = -abs(ground_ray.position.x) 
 		else:
 			animated_sprite_2d.play("idle")
+		if direction > 0:
+			animated_sprite_2d.flip_h = false
+			animated_sprite_2d.position.x = 0 
+			$DetectionArea.scale.x = 1
+			ground_ray.position.x = abs(ground_ray.position.x) 
+		else:
+			animated_sprite_2d.flip_h = true
+			animated_sprite_2d.position.x = -67
+			$DetectionArea.scale.x = -1
+			ground_ray.position.x = -abs(ground_ray.position.x)
 
 func trigger_attack_sequence():
 	is_preparing_attack = true
 	animated_sprite_2d.play("idle")
+	if direction > 0:
+		animated_sprite_2d.flip_h = false
+		animated_sprite_2d.position.x = 0
+	else:
+		animated_sprite_2d.flip_h = true
+		animated_sprite_2d.position.x = -67
 	await get_tree().create_timer(first_attack_delay).timeout
 	
 	if is_alive and not is_hurt and is_instance_valid(player_ref):
@@ -105,22 +112,23 @@ func start_attack():
 	
 	if animated_sprite_2d.sprite_frames.has_animation("attack"):
 		animated_sprite_2d.play("attack")
+		
 	await get_tree().create_timer(0.4).timeout 
 	
-	if is_alive:
-		throw_stone()
-	await animated_sprite_2d.animation_finished 
+	
+	if is_alive and is_instance_valid(player_ref):
+		var enemy_visual_center = Vector2(global_position.x + animated_sprite_2d.position.x, global_position.y)
+		var current_dist = enemy_visual_center.distance_to(player_ref.global_position)
+		if current_dist <= attack_range + 10.0: 
+			if player_ref.has_method("take_damage"):
+				player_ref.take_damage(melee_damage)
+				
+	await get_tree().create_timer(0.3).timeout 
 	is_attacking = false
+	animated_sprite_2d.play("idle") 
 	
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
-
-func throw_stone():
-	var stone = STONE_SCENE.instantiate()
-	stone.direction = -1 if animated_sprite_2d.flip_h else 1
-	var spawn_offset_x = -20 if animated_sprite_2d.flip_h else 20
-	stone.global_position = global_position + Vector2(spawn_offset_x, -10)
-	get_tree().current_scene.add_child(stone)
 
 func take_damage(amount):
 	if not is_alive or is_hurt:

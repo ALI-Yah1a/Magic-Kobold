@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cw02ctueqspac"]
+
+[ext_resource type="Script" uid="uid://bd7c22ypbej0l" path="res://Scripts/audio_manager.gd" id="1_hhwve"]
+[ext_resource type="AudioStream" uid="uid://1nwykval7eiu" path="res://Assets/UI/ihatetuesdays-jungle-ish-beat-for-video-games-314073.mp3" id="2_qixve"]
+[ext_resource type="AudioStream" uid="uid://c1wbfko2kx3gf" path="res://Assets/UI/freesound_community-old-radio-button-click-97549.mp3" id="3_0hehx"]
+
+[node name="AudioManager" type="Node" unique_id=187902957]
+script = ExtResource("1_hhwve")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1649285067]
+stream = ExtResource("2_qixve")
+autoplay = true
+parameters/looping = true
+
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="." unique_id=2061238717]
+stream = ExtResource("3_0hehx")

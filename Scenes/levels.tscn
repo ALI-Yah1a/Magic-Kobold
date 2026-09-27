@@ -397,4 +397,9 @@ text = "RETURN"
 libraries/ = SubResource("AnimationLibrary_uotyi")
 autoplay = &"level_animation"
 
+[connection signal="pressed" from="Node/Level 1 button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Node/Level 2 button" to="." method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="Node/Level 3 button" to="." method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="Node/Level 4 button" to="." method="_on_level_4_button_pressed"]
+[connection signal="pressed" from="Node/Level 5 button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="Node/Returnbutton" to="." method="_on_returnbutton_pressed"]

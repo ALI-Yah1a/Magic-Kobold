@@ -41,37 +41,38 @@ func _input(event: InputEvent) -> void:
 
 func _on_a_button_pressed() -> void:
 	direction_label.text = "LEFT"
-
+	AudioManager.play_click()
 
 func _on_d_button_pressed() -> void:
 	direction_label.text = "RIGHT"
-
+	AudioManager.play_click()
 
 func _on_space_button_pressed() -> void:
 	jump_label.text = "JUMP ALSO"
-
+	AudioManager.play_click()
 
 func _on_w_button_pressed() -> void:
 	jump_label.text = "JUMP"
-
+	AudioManager.play_click()
 
 func _on_e_button_pressed() -> void:
 	attack_label.text = "ATTACK"
-
+	AudioManager.play_click
 
 func _on_l_m_b_button_pressed() -> void:
 	attack_label.text = "ATTACK ALSO"
-
+	AudioManager.play_click()
 
 func _on_shift_button_pressed() -> void:
 	dash_label.text = "DASH"
-
+	AudioManager.play_click()
 
 func _on_escape_button_pressed() -> void:
 	pause_label.text = "PAUSE"
-
+	AudioManager.play_click()
 
 
 func _on_return_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	Transition.change_scene("res://Scenes/main_menu.tscn")
+	AudioManager.play_click()

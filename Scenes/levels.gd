@@ -16,11 +16,9 @@ func _process(delta: float) -> void:
 
 func _on_returnbutton_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn") 
-<<<<<<< HEAD
+
 
 
 func _on_level_1_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/trials scene.tscn") 
-=======
 	Transition.change_scene("res://Scenes/main_menu.tscn")
->>>>>>> origin/Nour

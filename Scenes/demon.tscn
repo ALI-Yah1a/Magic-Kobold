@@ -131,6 +131,7 @@ region = Rect2(199, 176, 82, 4)
 size = Vector2(452, 96)
 
 [node name="Demon" type="CharacterBody2D" unique_id=1916248942 groups=["Enemy"]]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_58f26")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1046993187]

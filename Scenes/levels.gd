@@ -26,6 +26,9 @@ func _process(delta: float) -> void:
 
 func _on_returnbutton_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn") 
+
+func _on_returnbutton_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	Transition.change_scene("res://Scenes/main_menu.tscn")
 	AudioManager.play_click()
 
@@ -68,6 +71,7 @@ func _on_level_4_button_pressed() -> void:
 	$Level4Popup.show()
 	$AnimationPlayer.play("level_4_popup_in")
 	$QuitFade.show()
+
 func _on_level_5_button_pressed() -> void:
 	AudioManager.play_click()
 	selected_level = 5
@@ -86,39 +90,22 @@ func update_level_display() -> void:
 			dots[i].text = "●"
 		else:
 			dots[i].text = "○"
-			
-
-
-
-
-
 
 func _on_back_1_button_pressed() -> void:
 	$Level1Popup.hide()
 	$QuitFade.hide()
 
-
-
 func _on_back_2_button_pressed() -> void:
 	$Level2Popup.hide()
 	$QuitFade.hide()
-
-
-
 
 func _on_back_3_button_pressed() -> void:
 	$Level3Popup.hide()
 	$QuitFade.hide()
 
-
-
-
 func _on_back_4_button_pressed() -> void:
 	$Level4Popup.hide()
 	$QuitFade.hide()
-
-
-
 
 func _on_back_5_button_pressed() -> void:
 	$Level5Popup.hide()

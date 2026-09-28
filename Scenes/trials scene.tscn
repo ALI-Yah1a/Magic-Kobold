@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://ci0dbfpwc61qi"]
+
+[ext_resource type="Texture2D" uid="uid://bfqvby1uxdn50" path="res://icon.svg" id="1_t61w2"]
+[ext_resource type="PackedScene" uid="uid://hu0rhqif7hvj" path="res://Scenes/player.tscn" id="2_7sena"]
+[ext_resource type="PackedScene" uid="uid://d0fxmbitr1i46" path="res://Scenes/level_ui.tscn" id="3_7sena"]
+[ext_resource type="PackedScene" uid="uid://yg8tb2057osi" path="res://Scenes/coin.tscn" id="4_euyl0"]
+[ext_resource type="PackedScene" uid="uid://dun1abdc8ienw" path="res://Scenes/dragon.tscn" id="5_w4178"]
+[ext_resource type="PackedScene" uid="uid://kjwfbqey26lb" path="res://Scenes/demon.tscn" id="6_3rxpk"]
+[ext_resource type="PackedScene" uid="uid://ct66afrbjw0q6" path="res://Scenes/medusa.tscn" id="7_fqraf"]
+[ext_resource type="PackedScene" uid="uid://c3j5p0u2nnns2" path="res://Scenes/jinn.tscn" id="8_0vrm1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_euyl0"]
+distance = -68.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rxpk"]
+size = Vector2(1583, 411)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ppe2y"]
+a = Vector2(-1169, -214)
+b = Vector2(-1169, 156)
+
+[node name="Node2D" type="Node2D" unique_id=186847169]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=37278167]
+position = Vector2(-43, 33)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=323576008]
+position = Vector2(288.5, 276.00003)
+scale = Vector2(28.054688, 3.2734375)
+texture = ExtResource("1_t61w2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1178433610]
+shape = SubResource("WorldBoundaryShape2D_euyl0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1596157223]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=703978188]
+position = Vector2(-1963, 261)
+scale = Vector2(12.3125, 3.2734375)
+texture = ExtResource("1_t61w2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=887813350]
+position = Vector2(-1969.5, 257.5)
+shape = SubResource("RectangleShape2D_3rxpk")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=445188594]
+position = Vector2(4097, 81)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=1637502343]
+position = Vector2(-1303, -62.000004)
+scale = Vector2(12.3125, 3.2734375)
+texture = ExtResource("1_t61w2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=490194514]
+position = Vector2(-921, -46)
+shape = SubResource("SegmentShape2D_ppe2y")
+
+[node name="Player" parent="." unique_id=2019291134 instance=ExtResource("2_7sena")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1759553115]
+zoom = Vector2(2, 2)
+
+[node name="LevelUI" parent="." unique_id=824301517 node_paths=PackedStringArray("player") instance=ExtResource("3_7sena")]
+player = NodePath("../Player")
+required_coins = 2
+required_monsters = 4
+next_level_path = "uid://ci0dbfpwc61qi"
+
+[node name="Coin" parent="." unique_id=1358264540 instance=ExtResource("4_euyl0")]
+position = Vector2(233, 39)
+
+[node name="Coin2" parent="." unique_id=563536584 instance=ExtResource("4_euyl0")]
+position = Vector2(119, 39)
+
+[node name="Dragon" parent="." unique_id=1666029679 instance=ExtResource("5_w4178")]
+position = Vector2(-2272, -25)
+
+[node name="Demon" parent="." unique_id=1916248942 instance=ExtResource("6_3rxpk")]
+position = Vector2(-952, 41)
+
+[node name="Medusa" parent="." unique_id=532436669 instance=ExtResource("7_fqraf")]
+position = Vector2(1243, 35)
+
+[node name="Jinn" parent="." unique_id=2055509518 instance=ExtResource("8_0vrm1")]
+position = Vector2(391, 12)

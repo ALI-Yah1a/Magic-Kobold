@@ -849,6 +849,17 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "RETURN"
 
+[connection signal="pressed" from="Node/Level 1 button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Node/Level 2 button" to="." method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="Node/Level 3 button" to="." method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="Node/Level 4 button" to="." method="_on_level_4_button_pressed"]
+[connection signal="pressed" from="Node/Level 5 button" to="." method="_on_level_5_button_pressed"]
+[connection signal="pressed" from="Node/Returnbutton" to="." method="_on_returnbutton_pressed"]
+[connection signal="pressed" from="Level1Popup/Back1Button" to="." method="_on_back_1_button_pressed"]
+[connection signal="pressed" from="Level2Popup/Back2Button" to="." method="_on_back_2_button_pressed"]
+[connection signal="pressed" from="Level3Popup/Back3Button" to="." method="_on_back_3_button_pressed"]
+[connection signal="pressed" from="Level4Popup/Back4Button" to="." method="_on_back_4_button_pressed"]
+[connection signal="pressed" from="Level5Popup/Back5Button" to="." method="_on_back_5_button_pressed"]
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1875883231]
 libraries/ = SubResource("AnimationLibrary_uotyi")
 autoplay = &"level_animation"
@@ -1403,15 +1414,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "ENTER"
-
-[connection signal="pressed" from="Node/Level 1 button" to="." method="_on_level_1_button_pressed"]
-[connection signal="pressed" from="Node/Level 2 button" to="." method="_on_level_2_button_pressed"]
-[connection signal="pressed" from="Node/Level 3 button" to="." method="_on_level_3_button_pressed"]
-[connection signal="pressed" from="Node/Level 4 button" to="." method="_on_level_4_button_pressed"]
-[connection signal="pressed" from="Node/Level 5 button" to="." method="_on_level_5_button_pressed"]
-[connection signal="pressed" from="Node/Returnbutton" to="." method="_on_returnbutton_pressed"]
-[connection signal="pressed" from="Level1Popup/Back1Button" to="." method="_on_back_1_button_pressed"]
-[connection signal="pressed" from="Level2Popup/Back2Button" to="." method="_on_back_2_button_pressed"]
-[connection signal="pressed" from="Level3Popup/Back3Button" to="." method="_on_back_3_button_pressed"]
-[connection signal="pressed" from="Level4Popup/Back4Button" to="." method="_on_back_4_button_pressed"]
-[connection signal="pressed" from="Level5Popup/Back5Button" to="." method="_on_back_5_button_pressed"]
+>>>>>>> main

@@ -849,17 +849,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "RETURN"
 
-[connection signal="pressed" from="Node/Level 1 button" to="." method="_on_level_1_button_pressed"]
-[connection signal="pressed" from="Node/Level 2 button" to="." method="_on_level_2_button_pressed"]
-[connection signal="pressed" from="Node/Level 3 button" to="." method="_on_level_3_button_pressed"]
-[connection signal="pressed" from="Node/Level 4 button" to="." method="_on_level_4_button_pressed"]
-[connection signal="pressed" from="Node/Level 5 button" to="." method="_on_level_5_button_pressed"]
-[connection signal="pressed" from="Node/Returnbutton" to="." method="_on_returnbutton_pressed"]
-[connection signal="pressed" from="Level1Popup/Back1Button" to="." method="_on_back_1_button_pressed"]
-[connection signal="pressed" from="Level2Popup/Back2Button" to="." method="_on_back_2_button_pressed"]
-[connection signal="pressed" from="Level3Popup/Back3Button" to="." method="_on_back_3_button_pressed"]
-[connection signal="pressed" from="Level4Popup/Back4Button" to="." method="_on_back_4_button_pressed"]
-[connection signal="pressed" from="Level5Popup/Back5Button" to="." method="_on_back_5_button_pressed"]
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1875883231]
 libraries/ = SubResource("AnimationLibrary_uotyi")
 autoplay = &"level_animation"
@@ -929,6 +918,7 @@ text = "LEVEL 01 / 05"
 [node name="Level1Popup" type="Panel" parent="." unique_id=535344026]
 visible = false
 z_index = 10
+texture_filter = 1
 layout_mode = 0
 offset_left = 652.0
 offset_top = 616.0
@@ -937,6 +927,7 @@ offset_bottom = 896.00183
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
 
 [node name="LevelName" type="Label" parent="Level1Popup" unique_id=622330379]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -956,6 +947,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyTitle" type="Label" parent="Level1Popup" unique_id=2132469287]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -980,6 +972,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyStars" type="Label" parent="Level1Popup" unique_id=2068118340]
+texture_filter = 1
 layout_mode = 0
 offset_left = 292.0
 offset_top = 77.0
@@ -992,6 +985,7 @@ theme_override_font_sizes/font_size = 31
 text = "★☆☆☆☆"
 
 [node name="Back1Button" type="Button" parent="Level1Popup" unique_id=1088120340]
+texture_filter = 1
 layout_mode = 0
 offset_left = 295.0
 offset_top = 154.0
@@ -1007,7 +1001,8 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "BACK"
 
-[node name="EnterButton" type="Button" parent="Level1Popup" unique_id=1503595324]
+[node name="Enter1Button" type="Button" parent="Level1Popup" unique_id=1503595324]
+texture_filter = 1
 layout_mode = 0
 offset_left = 98.0
 offset_top = 154.0
@@ -1027,6 +1022,7 @@ text = "ENTER"
 visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 10
+texture_filter = 1
 layout_mode = 0
 offset_left = 652.0
 offset_top = 623.0
@@ -1035,6 +1031,7 @@ offset_bottom = 903.0004
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
 
 [node name="LevelName" type="Label" parent="Level2Popup" unique_id=721061330]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -1054,6 +1051,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyTitle" type="Label" parent="Level2Popup" unique_id=638515242]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -1078,6 +1076,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyStars" type="Label" parent="Level2Popup" unique_id=1484413195]
+texture_filter = 1
 layout_mode = 0
 offset_left = 292.0
 offset_top = 77.0
@@ -1090,6 +1089,7 @@ theme_override_font_sizes/font_size = 31
 text = "★★☆☆☆"
 
 [node name="Back2Button" type="Button" parent="Level2Popup" unique_id=513025283]
+texture_filter = 1
 layout_mode = 0
 offset_left = 295.0
 offset_top = 154.0
@@ -1106,6 +1106,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "BACK"
 
 [node name="EnterButton" type="Button" parent="Level2Popup" unique_id=775774312]
+texture_filter = 1
 layout_mode = 0
 offset_left = 98.0
 offset_top = 154.0
@@ -1125,6 +1126,7 @@ text = "ENTER"
 visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 10
+texture_filter = 1
 layout_mode = 0
 offset_left = 652.0
 offset_top = 625.0
@@ -1133,6 +1135,7 @@ offset_bottom = 905.0003
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
 
 [node name="LevelName" type="Label" parent="Level3Popup" unique_id=34408901]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -1152,6 +1155,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyTitle" type="Label" parent="Level3Popup" unique_id=1962416156]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -1176,6 +1180,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyStars" type="Label" parent="Level3Popup" unique_id=811069642]
+texture_filter = 1
 layout_mode = 0
 offset_left = 292.0
 offset_top = 77.0
@@ -1188,6 +1193,7 @@ theme_override_font_sizes/font_size = 31
 text = "★★★☆☆"
 
 [node name="Back3Button" type="Button" parent="Level3Popup" unique_id=918064282]
+texture_filter = 1
 layout_mode = 0
 offset_left = 295.0
 offset_top = 154.0
@@ -1204,6 +1210,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "BACK"
 
 [node name="EnterButton" type="Button" parent="Level3Popup" unique_id=256353944]
+texture_filter = 1
 layout_mode = 0
 offset_left = 98.0
 offset_top = 154.0
@@ -1223,6 +1230,7 @@ text = "ENTER"
 visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 10
+texture_filter = 1
 layout_mode = 0
 offset_left = 652.0
 offset_top = 648.0
@@ -1231,6 +1239,7 @@ offset_bottom = 928.00073
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
 
 [node name="LevelName" type="Label" parent="Level4Popup" unique_id=533021112]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -1250,6 +1259,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyTitle" type="Label" parent="Level4Popup" unique_id=1421486207]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -1274,6 +1284,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyStars" type="Label" parent="Level4Popup" unique_id=389489645]
+texture_filter = 1
 layout_mode = 0
 offset_left = 292.0
 offset_top = 77.0
@@ -1286,6 +1297,7 @@ theme_override_font_sizes/font_size = 31
 text = "★★★★☆"
 
 [node name="Back4Button" type="Button" parent="Level4Popup" unique_id=1028576038]
+texture_filter = 1
 layout_mode = 0
 offset_left = 295.0
 offset_top = 154.0
@@ -1302,6 +1314,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "BACK"
 
 [node name="EnterButton" type="Button" parent="Level4Popup" unique_id=619560263]
+texture_filter = 1
 layout_mode = 0
 offset_left = 98.0
 offset_top = 154.0
@@ -1321,6 +1334,7 @@ text = "ENTER"
 visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 10
+texture_filter = 1
 layout_mode = 0
 offset_left = 652.0
 offset_top = 660.0
@@ -1329,6 +1343,7 @@ offset_bottom = 940.0007
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
 
 [node name="LevelName" type="Label" parent="Level5Popup" unique_id=1546529442]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -1348,6 +1363,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyTitle" type="Label" parent="Level5Popup" unique_id=1258739046]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -1372,6 +1388,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DifficultyStars" type="Label" parent="Level5Popup" unique_id=1836845161]
+texture_filter = 1
 layout_mode = 0
 offset_left = 292.0
 offset_top = 77.0
@@ -1384,6 +1401,7 @@ theme_override_font_sizes/font_size = 31
 text = "★★★★★"
 
 [node name="Back5Button" type="Button" parent="Level5Popup" unique_id=466894985]
+texture_filter = 1
 layout_mode = 0
 offset_left = 295.0
 offset_top = 154.0
@@ -1400,6 +1418,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "BACK"
 
 [node name="EnterButton" type="Button" parent="Level5Popup" unique_id=650667320]
+texture_filter = 1
 layout_mode = 0
 offset_left = 98.0
 offset_top = 154.0
@@ -1414,4 +1433,16 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_n45e2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "ENTER"
->>>>>>> main
+
+[connection signal="pressed" from="Node/Level 1 button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Node/Level 2 button" to="." method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="Node/Level 3 button" to="." method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="Node/Level 4 button" to="." method="_on_level_4_button_pressed"]
+[connection signal="pressed" from="Node/Level 5 button" to="." method="_on_level_5_button_pressed"]
+[connection signal="pressed" from="Node/Returnbutton" to="." method="_on_returnbutton_pressed"]
+[connection signal="pressed" from="Level1Popup/Back1Button" to="." method="_on_back_1_button_pressed"]
+[connection signal="pressed" from="Level1Popup/Enter1Button" to="." method="_on_enter_1_button_pressed"]
+[connection signal="pressed" from="Level2Popup/Back2Button" to="." method="_on_back_2_button_pressed"]
+[connection signal="pressed" from="Level3Popup/Back3Button" to="." method="_on_back_3_button_pressed"]
+[connection signal="pressed" from="Level4Popup/Back4Button" to="." method="_on_back_4_button_pressed"]
+[connection signal="pressed" from="Level5Popup/Back5Button" to="." method="_on_back_5_button_pressed"]

@@ -13,19 +13,11 @@ var selected_level := 1
 @onready var level_counter = $LevelCounter
 
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
-
-
-
-func _on_returnbutton_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn") 
 
 func _on_returnbutton_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
@@ -110,3 +102,7 @@ func _on_back_4_button_pressed() -> void:
 func _on_back_5_button_pressed() -> void:
 	$Level5Popup.hide()
 	$QuitFade.hide()
+
+
+func _on_enter_1_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/level_1.tscn")

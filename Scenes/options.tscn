@@ -383,6 +383,24 @@ offset_right = 1092.0
 offset_bottom = 496.0
 color = Color(0.8509804, 0.64705884, 0.18039216, 1)
 
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=915913620]
+z_index = 6
+layout_mode = 0
+offset_left = 692.0
+offset_top = 376.0
+offset_right = 1092.0
+offset_bottom = 378.0
+color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1458253375]
+z_index = 6
+layout_mode = 0
+offset_left = 692.0
+offset_top = 287.0
+offset_right = 1092.0
+offset_bottom = 289.0
+color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+
 [connection signal="value_changed" from="OptionsPanel/Margins/Content/SettingsList/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
 [connection signal="value_changed" from="OptionsPanel/Margins/Content/SettingsList/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
 [connection signal="toggled" from="OptionsPanel/Margins/Content/SettingsList/FullscreenButton" to="." method="_on_fullscreen_button_toggled"]

@@ -2,15 +2,12 @@ extends Control
 @onready var animation_player = $AnimationPlayer
 
 
-
 func _ready() -> void:
-	pass # Replace with function body.
-
+	pass 
 
  
 func _process(delta: float) -> void:
 	pass
-
 
 func _on_newgamebutton_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/levels.tscn")

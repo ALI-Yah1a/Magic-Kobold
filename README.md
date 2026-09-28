@@ -1,9 +1,9 @@
-# MAGIC-KOBOLD V.0.1 
+# MAGIC-KOBOLD V.0.2
 - MAGIC-KOBOLD is a 2D platformer game with 5 levels. Complete all the objectives to win each level!
 - The primary challenge is to attack the enemies by the sword to kill them and collect all the coins.
 - The main menu is extremely illustrative, as it catches the vibes of the game 
 # IMPORTANT NOTE
-- This is the first version of the game, it has some incomplete sections (e.g., levels, credits, and enemies)
+- This is the first version of the game, it has some incomplete sections (e.g., levels), however there is still only 2 levels left.
 ## How To Run The Game?
 - To run the game you should open the itch.io link, then click the button "Run Game". So simple.
 ## How To Play The Game?
@@ -19,6 +19,7 @@
 - The player can jump using the spacebar or W button.
 - You can attack using the LMB or the E button for the attack.
 - Using Shift for the dash.
+- Using ESC for pause.
 
 ## AI Use 
 - Barely used it, it was only for solving some code errors.

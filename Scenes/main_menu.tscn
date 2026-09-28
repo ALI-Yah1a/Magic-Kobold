@@ -1365,9 +1365,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -248.0
-offset_top = -130.0
+offset_top = 123.0
 offset_right = 252.0
-offset_bottom = 149.99988
+offset_bottom = 402.99988
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
@@ -1449,6 +1449,7 @@ text = "YES"
 [connection signal="pressed" from="MenuPanel/Newgamebutton" to="." method="_on_newgamebutton_pressed"]
 [connection signal="pressed" from="MenuPanel/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MenuPanel/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MenuPanel/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MenuPanel/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
 [connection signal="pressed" from="QuitPopup/NoButton" to="." method="_on_no_button_pressed"]
 [connection signal="pressed" from="QuitPopup/YesButton" to="." method="_on_yes_button_pressed"]

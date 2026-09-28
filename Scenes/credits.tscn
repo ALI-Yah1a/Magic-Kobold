@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://brg2xsfcht1g8"]
+
+[ext_resource type="Script" uid="uid://c008o8yig87ed" path="res://Scripts/credits.gd" id="1_1bamb"]
+[ext_resource type="Shader" uid="uid://dcf7fvd2eqxf6" path="res://Credits.gdshader" id="1_ccovl"]
+[ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="2_1bamb"]
+[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="3_xelri"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("1_ccovl")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lonyb"]
+bg_color = Color(0.0627451, 0.09411765, 0.1254902, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 11
+shadow_offset = Vector2(0, 7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.16078432, 0.29411766, 0.41960785, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8392157, 0.65882355, 0.30980393, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.2509804)
+anti_aliasing_size = 0.995
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0.11764706, 0.20784314, 0.3019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.65882355, 0.45882353, 0.18431373, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq62s"]
+bg_color = Color(0.23137255, 0.3882353, 0.52156866, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9490196, 0.8235294, 0.47843137, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.5019608)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Credits" type="Control" unique_id=1168178260]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1bamb")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1484974478]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1bamb")
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1998582880]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3882353)
+
+[node name="Labels" type="Node" parent="." unique_id=2073624646]
+
+[node name="Label6" type="Label" parent="Labels" unique_id=1322973846]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 610.0
+offset_right = -1286.0
+offset_bottom = 719.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xelri")
+theme_override_font_sizes/font_size = 50
+text = "Sound & Music:
+Nour Tamer & Ali Yahia"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Labels" unique_id=1203211911]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 473.0
+offset_right = -1295.0
+offset_bottom = 582.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xelri")
+theme_override_font_sizes/font_size = 50
+text = "ART & UI:
+Nour Tamer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Labels" unique_id=1970751475]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 342.0
+offset_right = -1265.0
+offset_bottom = 451.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xelri")
+theme_override_font_sizes/font_size = 50
+text = "Programming:
+Nour Tamer & Ali Yahia"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Labels" unique_id=1656420536]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 222.0
+offset_right = -1309.0
+offset_bottom = 331.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xelri")
+theme_override_font_sizes/font_size = 50
+text = "Game Design:
+ Ali Yahia"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Labels" unique_id=1137113590]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 92.0
+offset_right = -1280.0
+offset_bottom = 201.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xelri")
+theme_override_font_sizes/font_size = 50
+text = "Created By:
+Nour Tamer & Ali Yahia"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Labels" unique_id=84390423]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 15.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xelri")
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRects" type="Node" parent="." unique_id=1395900475]
+
+[node name="ColorRect" type="ColorRect" parent="ColorRects" unique_id=817205040]
+offset_left = 56.0
+offset_top = 208.0
+offset_right = 456.0
+offset_bottom = 212.0
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRects" unique_id=960753914]
+offset_left = 56.0
+offset_top = 335.0
+offset_right = 456.0
+offset_bottom = 339.0
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRects" unique_id=653139950]
+offset_left = 56.0
+offset_top = 457.0
+offset_right = 456.0
+offset_bottom = 461.0
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRects" unique_id=237121451]
+offset_left = 56.0
+offset_top = 591.0
+offset_right = 456.0
+offset_bottom = 595.0
+
+[node name="ColorRect5" type="ColorRect" parent="ColorRects" unique_id=1271087929]
+offset_left = 56.0
+offset_top = 729.0
+offset_right = 456.0
+offset_bottom = 733.0
+
+[node name="Panel" type="Panel" parent="." unique_id=202227308]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 508.0
+offset_bottom = 790.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lonyb")
+
+[node name="ReturnToMainButton" type="Button" parent="." unique_id=1266633039]
+texture_filter = 1
+layout_mode = 0
+offset_left = 815.0
+offset_top = 732.0
+offset_right = 971.0
+offset_bottom = 805.0
+theme_override_colors/font_color = Color(0.9529412, 0.8745098, 0.64705884, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.101960786, 0.08627451, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_xelri")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
+text = "RETURN"
+
+[connection signal="pressed" from="ReturnToMainButton" to="." method="_on_return_to_main_button_pressed"]

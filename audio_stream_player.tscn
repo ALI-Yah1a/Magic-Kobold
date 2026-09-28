@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cfisg2yadfh8j"]
+
+[ext_resource type="PackedScene" uid="uid://cpn0t7v2le7c5" path="res://Scenes/audio_stream_player.tscn" id="1_g84o6"]
+
+[node name="AudioStreamPlayer" unique_id=1305804193 instance=ExtResource("1_g84o6")]
+parameters/looping = true

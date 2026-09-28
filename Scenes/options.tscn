@@ -27,6 +27,79 @@ corner_radius_bottom_left = 12
 shadow_color = Color(0.14509805, 0.16862746, 0.32156864, 0.60784316)
 shadow_offset = Vector2(2, 5)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3pel"]
+atlas = ExtResource("2_kftxf")
+region = Rect2(105, 266, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kftxf"]
+atlas = ExtResource("2_kftxf")
+region = Rect2(105, 266, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_663nc"]
+atlas = ExtResource("2_kftxf")
+region = Rect2(105, 266, 13, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6uar"]
+bg_color = Color(0.9490196, 0.78039217, 0.36078432, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvj8k"]
+atlas = ExtResource("2_kftxf")
+region = Rect2(105, 266, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38txh"]
+atlas = ExtResource("2_kftxf")
+region = Rect2(105, 266, 13, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.16078432, 0.29411766, 0.41960785, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8392157, 0.65882355, 0.30980393, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.2509804)
+anti_aliasing_size = 0.995
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0.11764706, 0.20784314, 0.3019608, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.65882355, 0.45882353, 0.18431373, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq62s"]
+bg_color = Color(0.23137255, 0.3882353, 0.52156866, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9490196, 0.8235294, 0.47843137, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.5019608)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
 [sub_resource type="Animation" id="Animation_kftxf"]
 length = 0.001
 tracks/0/type = "value"
@@ -227,6 +300,11 @@ vertical_alignment = 1
 texture_filter = 1
 custom_minimum_size = Vector2(350, 40)
 layout_mode = 2
+theme_override_icons/grabber = SubResource("AtlasTexture_j3pel")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_kftxf")
+theme_override_icons/grabber_disabled = SubResource("AtlasTexture_663nc")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_b6uar")
 value = 80.0
 
 [node name="MusicVolumeLabel" type="Label" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1165898283]
@@ -242,6 +320,11 @@ vertical_alignment = 1
 texture_filter = 1
 custom_minimum_size = Vector2(350, 40)
 layout_mode = 2
+theme_override_icons/grabber = SubResource("AtlasTexture_j3pel")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_hvj8k")
+theme_override_icons/grabber_disabled = SubResource("AtlasTexture_38txh")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_b6uar")
 value = 70.0
 
 [node name="FullscreenButton" type="CheckButton" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1632842966]
@@ -260,22 +343,45 @@ button_pressed = true
 text = "SOUND EFFECTS"
 
 [node name="ResetButton" type="Button" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=1857680804]
+texture_filter = 1
 custom_minimum_size = Vector2(220, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
 theme_override_fonts/font = ExtResource("5_663nc")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "RESET DEFAULTS"
 
 [node name="ReturnButton" type="Button" parent="OptionsPanel/Margins/Content/SettingsList" unique_id=896357833]
+texture_filter = 1
 custom_minimum_size = Vector2(220, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.95686275, 0.8862745, 0.70980394, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.6117647, 0.3137255, 1)
 theme_override_fonts/font = ExtResource("5_663nc")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aq62s")
 text = "RETURN"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1618509860]
 libraries/ = SubResource("AnimationLibrary_hvj8k")
 autoplay = &"options_animation"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1147614472]
+z_index = 6
+layout_mode = 0
+offset_left = 692.0
+offset_top = 494.0
+offset_right = 1092.0
+offset_bottom = 496.0
+color = Color(0.8509804, 0.64705884, 0.18039216, 1)
 
 [connection signal="value_changed" from="OptionsPanel/Margins/Content/SettingsList/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
 [connection signal="value_changed" from="OptionsPanel/Margins/Content/SettingsList/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]

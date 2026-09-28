@@ -41,15 +41,16 @@ func _on_fullscreen_button_toggled(toggled_on: bool) -> void:
 
 func _on_sound_button_toggled(toggled_on: bool) -> void:
 	AudioServer.set_bus_mute(0, not toggled_on)
-
+	AudioManager.play_click()
 
 func _on_reset_button_pressed() -> void:
 	master_volume_slider.value = 80
 	music_volume_slider.value = 70
 	fullscreen_button.button_pressed = false
 	sound_button.button_pressed = true
-
+	AudioManager.play_click()
 
 func _on_return_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	Transition.change_scene("res://Scenes/main_menu.tscn")
+	AudioManager.play_click()

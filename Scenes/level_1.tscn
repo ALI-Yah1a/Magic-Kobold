@@ -3,19 +3,22 @@
 [ext_resource type="Texture2D" uid="uid://b3bblqmc6s267" path="res://Assets/Tileset/Tiles/Tilesheet - WOODS.png" id="1_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://hu0rhqif7hvj" path="res://Scenes/player.tscn" id="2_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://d0fxmbitr1i46" path="res://Scenes/level_ui.tscn" id="3_6444e"]
+[ext_resource type="Texture2D" uid="uid://b3bblqmc6s267" path="res://Assets/Tileset/Tiles/Tilesheet - WOODS.png" id="1_7p6j4"]
+[ext_resource type="PackedScene" uid="uid://hu0rhqif7hvj" path="res://Scenes/player.tscn" id="2_7p6j4"]
+[ext_resource type="PackedScene" uid="uid://d0fxmbitr1i46" path="res://Scenes/level_ui.tscn" id="3_6444e"]
+[ext_resource type="PackedScene" uid="uid://yg8tb2057osi" path="res://Scenes/coin.tscn" id="3_evi0p"]
 [ext_resource type="Texture2D" uid="uid://cbslfdhgpdng8" path="res://Assets/Tileset/Background/Background.png" id="4_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://c3j5p0u2nnns2" path="res://Scenes/jinn.tscn" id="5_6444e"]
 [ext_resource type="Script" uid="uid://067ym8qnjenc" path="res://Scripts/indicator_manager.gd" id="5_evi0p"]
-[ext_resource type="PackedScene" uid="uid://dhyoiv8jsnvms" path="res://Scenes/house.tscn" id="5_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://dhyoiv8jsnvms" path="res://Scenes/house.tscn" id="5_house"]
 [ext_resource type="PackedScene" uid="uid://c7vwvcmu4igvj" path="res://Scenes/grass.tscn" id="6_chwpn"]
-[ext_resource type="PackedScene" uid="uid://civpp4sv5xlg5" path="res://Scenes/indicator.tscn" id="6_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://civpp4sv5xlg5" path="res://Scenes/indicator.tscn" id="6_indicator"]
 [ext_resource type="PackedScene" uid="uid://dd5imogadf3wi" path="res://Scenes/tree.tscn" id="7_af3po"]
 [ext_resource type="PackedScene" uid="uid://cler02sfhx1gh" path="res://Scenes/stone.tscn" id="8_uy8f0"]
 [ext_resource type="PackedScene" uid="uid://dscrahr6rmtq1" path="res://Scenes/monster_here.tscn" id="9_af3po"]
 [ext_resource type="PackedScene" uid="uid://dun1abdc8ienw" path="res://Scenes/dragon.tscn" id="11_oovug"]
 [ext_resource type="PackedScene" uid="uid://ct66afrbjw0q6" path="res://Scenes/medusa.tscn" id="12_8i23i"]
 [ext_resource type="PackedScene" uid="uid://kjwfbqey26lb" path="res://Scenes/demon.tscn" id="13_8yhm2"]
-[ext_resource type="PackedScene" uid="uid://yg8tb2057osi" path="res://Scenes/coin.tscn" id="14_8i23i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evi0p"]
 texture = ExtResource("1_7p6j4")
@@ -654,7 +657,55 @@ player = NodePath("../Player")
 required_coins = 8
 required_monsters = 8
 
+[node name="Coin" parent="Coins" unique_id=1358264540 instance=ExtResource("3_evi0p")]
+position = Vector2(104, 7)
+
+[node name="Coin2" parent="Coins" unique_id=1954368298 instance=ExtResource("3_evi0p")]
+position = Vector2(215, -67)
+
+[node name="Coin3" parent="Coins" unique_id=417585630 instance=ExtResource("3_evi0p")]
+position = Vector2(96, -143)
+
+[node name="Coin4" parent="Coins" unique_id=748677869 instance=ExtResource("3_evi0p")]
+position = Vector2(909, -288)
+
+[node name="Coin5" parent="Coins" unique_id=482432660 instance=ExtResource("3_evi0p")]
+position = Vector2(1041, -265)
+
+[node name="Coin6" parent="Coins" unique_id=1117752393 instance=ExtResource("3_evi0p")]
+position = Vector2(1179, -271)
+
+[node name="Coin7" parent="Coins" unique_id=844922054 instance=ExtResource("3_evi0p")]
+position = Vector2(1277, -169)
+
+[node name="Coin8" parent="Coins" unique_id=1518941652 instance=ExtResource("3_evi0p")]
+position = Vector2(917, -69)
+
+[node name="Coin9" parent="Coins" unique_id=1729922599 instance=ExtResource("3_evi0p")]
+position = Vector2(642, 110)
+
+[node name="Coin10" parent="Coins" unique_id=760069895 instance=ExtResource("3_evi0p")]
+position = Vector2(1472, -285)
+
+[node name="LevelUI" parent="." unique_id=824301517 instance=ExtResource("3_6444e")]
+visible = false
+required_coins = 10
+required_monsters = 4
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1690948269]
+visible = false
+
+[node name="Medusa" parent="Enemies" unique_id=532436669 instance=ExtResource("12_8i23i")]
+
+[node name="Jinn" parent="Enemies" unique_id=1666029679 instance=ExtResource("5_6444e")]
+
+[node name="Demon" parent="Enemies" unique_id=1916248942 instance=ExtResource("13_8yhm2")]
+
+[node name="Dragon" parent="Enemies" unique_id=537647056 instance=ExtResource("11_oovug")]
+
 [node name="Background" type="Node2D" parent="." unique_id=904285265]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=2113366558]
 z_index = -6
 
 [node name="Node2D" type="Node2D" parent="Background" unique_id=1098079284]

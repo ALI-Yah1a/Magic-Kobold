@@ -1209,7 +1209,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "BACK"
 
-[node name="EnterButton" type="Button" parent="Level3Popup" unique_id=256353944]
+[node name="Enter3Button" type="Button" parent="Level3Popup" unique_id=256353944]
 texture_filter = 1
 layout_mode = 0
 offset_left = 98.0
@@ -1445,5 +1445,6 @@ text = "ENTER"
 [connection signal="pressed" from="Level2Popup/Back2Button" to="." method="_on_back_2_button_pressed"]
 [connection signal="pressed" from="Level2Popup/Enter2Button" to="." method="_on_enter_2_button_pressed"]
 [connection signal="pressed" from="Level3Popup/Back3Button" to="." method="_on_back_3_button_pressed"]
+[connection signal="pressed" from="Level3Popup/Enter3Button" to="." method="_on_enter_3_button_pressed"]
 [connection signal="pressed" from="Level4Popup/Back4Button" to="." method="_on_back_4_button_pressed"]
 [connection signal="pressed" from="Level5Popup/Back5Button" to="." method="_on_back_5_button_pressed"]

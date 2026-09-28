@@ -145,7 +145,7 @@ shape = SubResource("CapsuleShape2D_475lp")
 
 [node name="GroundRay" type="RayCast2D" parent="." unique_id=1690048232]
 position = Vector2(2, 7)
-target_position = Vector2(-1, 57)
+target_position = Vector2(-0.57142854, 65.85714)
 
 [node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1394816969]
 offset_left = -65.99999

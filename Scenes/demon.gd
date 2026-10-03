@@ -8,11 +8,10 @@ class_name enemy2
 
 var speed = 110
 var chase_speed = 130
-# تقليل المسافة لأن الهجوم بالصولجان يتطلب الاقتراب (يمكنك تعديلها حسب طول سلاحك)
 var attack_range = 60.0 
 var attack_cooldown = 1.5
-var first_attack_delay = 0.5
-var melee_damage = 10 # قيمة الضرر الذي يسببه الصولجان
+var first_attack_delay = 0.8
+var melee_damage = 10 
 var direction = 1
 var max_hp = 2
 var current_hp = 2

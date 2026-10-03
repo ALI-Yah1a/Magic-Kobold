@@ -654,7 +654,7 @@ zoom = Vector2(2.5, 2.5)
 player = NodePath("../Player")
 required_coins = 18
 required_monsters = 12
-next_level_path = "uid://dqo6pae7j8i04"
+next_level_path = "uid://85r425dq64gm"
 
 [node name="Background" type="Node2D" parent="." unique_id=904285265]
 z_index = -6

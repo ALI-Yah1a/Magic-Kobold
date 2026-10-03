@@ -651,7 +651,6 @@ position = Vector2(-14.999992, 29.000004)
 zoom = Vector2(2.5, 2.5)
 
 [node name="LevelUI" parent="." unique_id=824301517 node_paths=PackedStringArray("player") instance=ExtResource("3_fhuy1")]
-visible = false
 player = NodePath("../Player")
 required_coins = 11
 next_level_path = "uid://dd3a4ic4bq0oo"

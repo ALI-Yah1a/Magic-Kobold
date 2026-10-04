@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://p0drib7bkyl"]
 
-[ext_resource type="Script" uid="uid://3novgfcdhwgj" path="res://Scenes/options.gd" id="1_prnvy"]
+[ext_resource type="Script" uid="uid://3novgfcdhwgj" path="res://Scripts/options.gd" id="1_prnvy"]
 [ext_resource type="Texture2D" uid="uid://b15cau6q5to7v" path="res://Assets/UI/32x32-Tilesheet.png" id="2_kftxf"]
 [ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="2_qyyw6"]
-[ext_resource type="Shader" uid="uid://tf8jtc1k8o8s" path="res://Scenes/options.gdshader" id="3_ww8vx"]
+[ext_resource type="Shader" uid="uid://tf8jtc1k8o8s" path="res://Scripts/options.gdshader" id="3_ww8vx"]
 [ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="5_663nc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_al4r6"]

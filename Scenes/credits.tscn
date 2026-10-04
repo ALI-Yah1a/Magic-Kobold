@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brg2xsfcht1g8"]
 
 [ext_resource type="Script" uid="uid://c008o8yig87ed" path="res://Scripts/credits.gd" id="1_1bamb"]
-[ext_resource type="Shader" uid="uid://dcf7fvd2eqxf6" path="res://Credits.gdshader" id="1_ccovl"]
+[ext_resource type="Shader" uid="uid://dcf7fvd2eqxf6" path="res://Scripts/Credits.gdshader" id="1_ccovl"]
 [ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="2_1bamb"]
 [ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="3_xelri"]
 [ext_resource type="Texture2D" uid="uid://ov25b5sjlx5j" path="res://Assets/Player/Player Face.png" id="5_xelri"]

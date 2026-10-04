@@ -1,7 +1,7 @@
 extends Control
 
 var current_level := 1
-var total_levels := 7
+var total_levels := 5
 var selected_level := 1
 @onready var dots = [
 	$LevelProgress/Dot1,
@@ -12,8 +12,17 @@ var selected_level := 1
 	]
 @onready var level_counter = $LevelCounter
 
+@onready var level_buttons = [
+	$"Node/Level 1 button", 
+	$"Node/Level 2 button",
+	$"Node/Level 3 button",
+	$"Node/Level 4 button",
+	$"Node/Level 5 button"
+]
+
 func _ready() -> void:
-	pass
+
+	update_level_display()
 
 func _process(delta: float) -> void:
 	pass
@@ -74,14 +83,26 @@ func _on_level_5_button_pressed() -> void:
 	$AnimationPlayer.play("level_5_popular_in")
 	$QuitFade.show()
 
-func update_level_display() -> void:
-	level_counter.text = "LEVEL %02d / %02d" % [current_level, total_levels]
 
-	for i in range(total_levels):
-		if i + 1 == current_level:
-			dots[i].text = "●"
+
+func check_level_completion() -> void:
+	if current_level < total_levels:
+		current_level += 1
+		update_level_display() 
+
+func update_level_display() -> void:
+	level_counter.text = "LEVEL %02d / %02d" % [Global.current_level, Global.total_levels]
+
+	for i in range(Global.total_levels):
+		
+		if i < Global.current_level:
+			
+			dots[i].text = "●" 
+			level_buttons[i].disabled = false
 		else:
-			dots[i].text = "○"
+			
+			dots[i].text = "○" 
+			level_buttons[i].disabled = true  
 
 func _on_back_1_button_pressed() -> void:
 	$Level1Popup.hide()

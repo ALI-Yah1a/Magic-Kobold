@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c6ns38r0r5lwd"]
 
-[ext_resource type="Script" uid="uid://c7srjwyktxdcj" path="res://Scenes/levels.gd" id="1_3akqy"]
-[ext_resource type="Shader" uid="uid://cnwjc1f03hhtw" path="res://Scenes/levels.gdshader" id="1_xgx5e"]
+[ext_resource type="Script" uid="uid://c7srjwyktxdcj" path="res://Scripts/levels.gd" id="1_3akqy"]
 [ext_resource type="Texture2D" uid="uid://cikl37erkrqax" path="res://Assets/UI/background image main menu.jpg" id="1_yh33m"]
+[ext_resource type="Shader" uid="uid://cnwjc1f03hhtw" path="res://Scripts/levels.gdshader" id="2_3akqy"]
 [ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="3_uusmb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xgx5e"]
-shader = ExtResource("1_xgx5e")
+shader = ExtResource("2_3akqy")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
 bg_color = Color(0.16078432, 0.29411766, 0.41960785, 1)
@@ -886,22 +886,26 @@ text = "●"
 
 [node name="Dot2" type="Label" parent="LevelProgress" unique_id=1715841421]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+theme_override_font_sizes/font_size = 52
 text = "○"
 
 [node name="Dot3" type="Label" parent="LevelProgress" unique_id=1401941882]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+theme_override_font_sizes/font_size = 52
 text = "○"
 
 [node name="Dot4" type="Label" parent="LevelProgress" unique_id=1907357602]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+theme_override_font_sizes/font_size = 52
 text = "○"
 
 [node name="Dot5" type="Label" parent="LevelProgress" unique_id=1525351840]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.8509804, 0.64705884, 0.18039216, 1)
+theme_override_font_sizes/font_size = 52
 text = "○"
 
 [node name="LevelCounter" type="Label" parent="." unique_id=1952970172]

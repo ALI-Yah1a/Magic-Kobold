@@ -13,7 +13,7 @@ extends CanvasLayer
 @export_file("*.tscn") var next_level_path: String
 var current_coins: int = 0
 var current_monsters: int = 0
-
+var has_trophy = false
 func _ready():
 	current_level.text = "Level " + str(current_level_number)  
 	if player:
@@ -54,7 +54,7 @@ func update_monsters_ui():
 	monsters_label.text = str(current_monsters) + " / " + str(required_monsters)
 
 func check_level_completion():
-	if current_coins >= required_coins and current_monsters >= required_monsters: 
+	if current_coins >= required_coins and current_monsters >= required_monsters and has_trophy: 
 		level_complete.visible = true
 		get_tree().paused = true
 func _input(event):
@@ -85,3 +85,7 @@ func _on_next_level_button_pressed() -> void:
 
 func set_level(level_number: int) -> void:
 	current_level.text = "LEVEL %02d" % level_number
+	
+func trophy_collected() -> void:
+	has_trophy = true
+	check_level_completion()

@@ -765,7 +765,7 @@ position = Vector2(5505, 2454)
 position = Vector2(8216, 1878)
 
 [node name="Trophy" parent="Decorations" unique_id=1871822218 instance=ExtResource("10_pjppf")]
-position = Vector2(8856, 1824)
+position = Vector2(8864, 1824)
 
 [node name="Monsters" type="Node2D" parent="." unique_id=1703639680]
 

@@ -10,13 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://cler02sfhx1gh" path="res://Scenes/stone.tscn" id="8_sn477"]
 [ext_resource type="PackedScene" uid="uid://dscrahr6rmtq1" path="res://Scenes/monster_here.tscn" id="9_yu7yj"]
 [ext_resource type="PackedScene" uid="uid://c3j5p0u2nnns2" path="res://Scenes/jinn.tscn" id="10_np6ff"]
+[ext_resource type="PackedScene" uid="uid://cl6m4qf7tb17e" path="res://Scenes/trophy.tscn" id="10_pied6"]
 [ext_resource type="PackedScene" uid="uid://dun1abdc8ienw" path="res://Scenes/dragon.tscn" id="11_rwdpc"]
 [ext_resource type="PackedScene" uid="uid://ct66afrbjw0q6" path="res://Scenes/medusa.tscn" id="12_k8amm"]
 [ext_resource type="PackedScene" uid="uid://kjwfbqey26lb" path="res://Scenes/demon.tscn" id="13_w3doo"]
 [ext_resource type="PackedScene" uid="uid://yg8tb2057osi" path="res://Scenes/coin.tscn" id="14_5lg7m"]
 [ext_resource type="Script" uid="uid://067ym8qnjenc" path="res://Scripts/indicator_manager.gd" id="15_fvy3r"]
 [ext_resource type="PackedScene" uid="uid://civpp4sv5xlg5" path="res://Scenes/indicator.tscn" id="16_f1g4w"]
-[ext_resource type="FontFile" uid="uid://bfuu20wl4dhl5" path="res://Assets/UI/BlackgothRegular-xRg40.otf" id="17_kao8l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evi0p"]
 texture = ExtResource("1_pied6")
@@ -654,6 +654,7 @@ zoom = Vector2(2.5, 2.5)
 player = NodePath("../Player")
 required_coins = 18
 required_monsters = 14
+current_level_number = 5
 next_level_path = "uid://wwmqlxwiha0o"
 
 [node name="Background" type="Node2D" parent="." unique_id=904285265]
@@ -746,7 +747,7 @@ position = Vector2(3786, 3314)
 position = Vector2(5346, 2674)
 
 [node name="Tree9" parent="Decorations" unique_id=1589299416 instance=ExtResource("7_nd3ft")]
-position = Vector2(6116, 3025)
+position = Vector2(5950, 3025)
 
 [node name="Tree10" parent="Decorations" unique_id=1383287093 instance=ExtResource("7_nd3ft")]
 position = Vector2(1963, 3474)
@@ -817,6 +818,9 @@ position = Vector2(5302, 2710)
 [node name="MonsterHere14" parent="Decorations" unique_id=1595728551 instance=ExtResource("9_yu7yj")]
 position = Vector2(5650, 3062)
 
+[node name="Trophy" parent="Decorations" unique_id=1871822218 instance=ExtResource("10_pied6")]
+position = Vector2(6152, 3009)
+
 [node name="Monsters" type="Node2D" parent="." unique_id=1703639680]
 
 [node name="Jinn" parent="Monsters" unique_id=1666029679 instance=ExtResource("10_np6ff")]
@@ -841,7 +845,7 @@ position = Vector2(4035.9998, 3303)
 position = Vector2(2857, 3866)
 
 [node name="Dragon3" parent="Monsters" unique_id=922776334 instance=ExtResource("11_rwdpc")]
-position = Vector2(5968, 3015)
+position = Vector2(5636, 3027)
 
 [node name="Medusa" parent="Monsters" unique_id=532436669 instance=ExtResource("12_k8amm")]
 position = Vector2(703, 3521)
@@ -906,7 +910,7 @@ position = Vector2(5035, 2690)
 position = Vector2(5504, 2944)
 
 [node name="Coin15" parent="Coins" unique_id=1056916739 instance=ExtResource("14_5lg7m")]
-position = Vector2(6169, 3047)
+position = Vector2(5840, 3057)
 
 [node name="Coin16" parent="Coins" unique_id=921894157 instance=ExtResource("14_5lg7m")]
 position = Vector2(4226, 3335)
@@ -920,109 +924,3 @@ position = Vector2(2759, 3709)
 [node name="IndicatorManager" type="CanvasLayer" parent="." unique_id=1381917470]
 script = ExtResource("15_fvy3r")
 indicator_scene = ExtResource("16_f1g4w")
-
-[node name="Labels" type="Node" parent="." unique_id=920821189]
-
-[node name="Label" type="Label" parent="Labels" unique_id=450996756]
-visible = false
-z_index = -5
-offset_left = 2496.0
-offset_top = 711.0
-offset_right = 2720.0
-offset_bottom = 815.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_kao8l")
-theme_override_font_sizes/font_size = 100
-text = "DOWN."
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="Labels" unique_id=279146213]
-visible = false
-z_index = -5
-offset_left = 2496.0
-offset_top = 834.0
-offset_right = 2720.0
-offset_bottom = 938.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_kao8l")
-theme_override_font_sizes/font_size = 100
-text = "DOWN."
-metadata/_edit_use_anchors_ = true
-
-[node name="Label5" type="Label" parent="Labels" unique_id=953788899]
-visible = false
-z_index = -5
-offset_left = 2496.0
-offset_top = 974.0
-offset_right = 2720.0
-offset_bottom = 1078.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_kao8l")
-theme_override_font_sizes/font_size = 100
-text = "DOWN."
-metadata/_edit_use_anchors_ = true
-
-[node name="Label6" type="Label" parent="Labels" unique_id=608408109]
-visible = false
-z_index = -5
-offset_left = 2496.0
-offset_top = 1117.0
-offset_right = 2720.0
-offset_bottom = 1221.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_kao8l")
-theme_override_font_sizes/font_size = 100
-text = "DOWN."
-metadata/_edit_use_anchors_ = true
-
-[node name="Label7" type="Label" parent="Labels" unique_id=340653796]
-visible = false
-z_index = -5
-offset_left = 2496.0
-offset_top = 1293.0
-offset_right = 2720.0
-offset_bottom = 1397.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_kao8l")
-theme_override_font_sizes/font_size = 100
-text = "DOWN."
-metadata/_edit_use_anchors_ = true
-
-[node name="Label8" type="Label" parent="Labels" unique_id=362724643]
-visible = false
-z_index = -5
-offset_left = 2498.0
-offset_top = 1480.0
-offset_right = 2722.0
-offset_bottom = 1584.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_kao8l")
-theme_override_font_sizes/font_size = 100
-text = "DOWN."
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="Labels" unique_id=1164572209]
-visible = false
-z_index = -5
-offset_left = 79.0
-offset_top = 82.0
-offset_right = 373.0
-offset_bottom = 114.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_kao8l")
-theme_override_font_sizes/font_size = 30
-text = "KILL ALL OF THE MONSTERS"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="Labels" unique_id=1547521403]
-visible = false
-z_index = -5
-offset_left = 79.0
-offset_top = 118.0
-offset_right = 373.0
-offset_bottom = 150.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("17_kao8l")
-theme_override_font_sizes/font_size = 30
-text = "COLLECT ALL OF THE COINS"
-metadata/_edit_use_anchors_ = true

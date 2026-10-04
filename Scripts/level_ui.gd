@@ -5,14 +5,17 @@ extends CanvasLayer
 @onready var monsters_label: Label = $HUD/PlayerStats/VitalsAndStats/MonstersTracker/MonstersLabel
 @onready var pause_menu: Control = $PauseMenu
 @onready var level_complete: Control = $LevelComplete
+@onready var current_level: Label = $HUD/PlayerStats/VitalsAndStats/CurrentLevel
 @export var player: Player 
 @export var required_coins: int = 50
 @export var required_monsters: int = 10
+@export var current_level_number: int = 1  
 @export_file("*.tscn") var next_level_path: String
 var current_coins: int = 0
 var current_monsters: int = 0
 
 func _ready():
+	current_level.text = "Level " + str(current_level_number)  
 	if player:
 		health_bar.max_value = player.max_health
 		health_bar.value = player.current_health
@@ -79,3 +82,6 @@ func _on_next_level_button_pressed() -> void:
 	get_tree().paused = false
 	if next_level_path != "":
 		get_tree().change_scene_to_file(next_level_path)
+
+func set_level(level_number: int) -> void:
+	current_level.text = "LEVEL %02d" % level_number

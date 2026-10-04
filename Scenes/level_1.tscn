@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dd5imogadf3wi" path="res://Scenes/tree.tscn" id="7_af3po"]
 [ext_resource type="PackedScene" uid="uid://cler02sfhx1gh" path="res://Scenes/stone.tscn" id="8_uy8f0"]
 [ext_resource type="PackedScene" uid="uid://dscrahr6rmtq1" path="res://Scenes/monster_here.tscn" id="9_af3po"]
+[ext_resource type="PackedScene" uid="uid://cl6m4qf7tb17e" path="res://Scenes/trophy.tscn" id="10_pjppf"]
 [ext_resource type="PackedScene" uid="uid://dun1abdc8ienw" path="res://Scenes/dragon.tscn" id="11_oovug"]
 [ext_resource type="PackedScene" uid="uid://ct66afrbjw0q6" path="res://Scenes/medusa.tscn" id="12_8i23i"]
 [ext_resource type="PackedScene" uid="uid://kjwfbqey26lb" path="res://Scenes/demon.tscn" id="13_8yhm2"]
@@ -763,6 +764,9 @@ position = Vector2(5505, 2454)
 [node name="MonsterHere8" parent="Decorations" unique_id=420423195 instance=ExtResource("9_af3po")]
 position = Vector2(8216, 1878)
 
+[node name="Trophy" parent="Decorations" unique_id=1871822218 instance=ExtResource("10_pjppf")]
+position = Vector2(8856, 1824)
+
 [node name="Monsters" type="Node2D" parent="." unique_id=1703639680]
 
 [node name="Jinn" parent="Monsters" unique_id=1666029679 instance=ExtResource("5_6444e")]
@@ -813,7 +817,7 @@ position = Vector2(5221, 2720)
 position = Vector2(7003, 1924)
 
 [node name="Coin8" parent="Coins" unique_id=1595940771 instance=ExtResource("14_8i23i")]
-position = Vector2(8825, 1851)
+position = Vector2(8649, 1862)
 
 [node name="IndicatorManager" type="CanvasLayer" parent="." unique_id=1381917470]
 script = ExtResource("5_evi0p")

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dd5imogadf3wi" path="res://Scenes/tree.tscn" id="7_hed5s"]
 [ext_resource type="PackedScene" uid="uid://cler02sfhx1gh" path="res://Scenes/stone.tscn" id="8_yykrm"]
 [ext_resource type="PackedScene" uid="uid://dscrahr6rmtq1" path="res://Scenes/monster_here.tscn" id="9_2awvy"]
+[ext_resource type="PackedScene" uid="uid://cl6m4qf7tb17e" path="res://Scenes/trophy.tscn" id="10_nbwsh"]
 [ext_resource type="PackedScene" uid="uid://c3j5p0u2nnns2" path="res://Scenes/jinn.tscn" id="10_nrv0r"]
 [ext_resource type="PackedScene" uid="uid://dun1abdc8ienw" path="res://Scenes/dragon.tscn" id="11_gmj2a"]
 [ext_resource type="PackedScene" uid="uid://ct66afrbjw0q6" path="res://Scenes/medusa.tscn" id="12_n8e0l"]
@@ -654,6 +655,7 @@ zoom = Vector2(2.5, 2.5)
 player = NodePath("../Player")
 required_coins = 14
 required_monsters = 12
+current_level_number = 3
 next_level_path = "uid://dgcd122olofma"
 
 [node name="Background" type="Node2D" parent="." unique_id=904285265]
@@ -816,6 +818,9 @@ position = Vector2(7817, 1622)
 
 [node name="MonsterHere14" parent="Decorations" unique_id=209418965 instance=ExtResource("9_2awvy")]
 position = Vector2(8262, 1878)
+
+[node name="Trophy" parent="Decorations" unique_id=1871822218 instance=ExtResource("10_nbwsh")]
+position = Vector2(8858, 1823)
 
 [node name="Monsters" type="Node2D" parent="." unique_id=1703639680]
 

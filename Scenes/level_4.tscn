@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dd5imogadf3wi" path="res://Scenes/tree.tscn" id="7_qh6br"]
 [ext_resource type="PackedScene" uid="uid://cler02sfhx1gh" path="res://Scenes/stone.tscn" id="8_nqprj"]
 [ext_resource type="PackedScene" uid="uid://dscrahr6rmtq1" path="res://Scenes/monster_here.tscn" id="9_dt3rr"]
+[ext_resource type="PackedScene" uid="uid://cl6m4qf7tb17e" path="res://Scenes/trophy.tscn" id="10_cxe20"]
 [ext_resource type="PackedScene" uid="uid://c3j5p0u2nnns2" path="res://Scenes/jinn.tscn" id="10_o5257"]
 [ext_resource type="PackedScene" uid="uid://dun1abdc8ienw" path="res://Scenes/dragon.tscn" id="11_2a174"]
 [ext_resource type="PackedScene" uid="uid://ct66afrbjw0q6" path="res://Scenes/medusa.tscn" id="12_sw1t4"]
@@ -654,6 +655,7 @@ zoom = Vector2(2.5, 2.5)
 player = NodePath("../Player")
 required_coins = 18
 required_monsters = 12
+current_level_number = 4
 next_level_path = "uid://85r425dq64gm"
 
 [node name="Background" type="Node2D" parent="." unique_id=904285265]
@@ -728,7 +730,7 @@ position = Vector2(677, 786)
 position = Vector2(2022, 786)
 
 [node name="Tree5" parent="Decorations" unique_id=1575651872 instance=ExtResource("7_qh6br")]
-position = Vector2(3573, 1075)
+position = Vector2(3505, 1074)
 
 [node name="Tree6" parent="Decorations" unique_id=447994541 instance=ExtResource("7_qh6br")]
 position = Vector2(1835, 1779)
@@ -793,6 +795,9 @@ position = Vector2(4082, 1398)
 [node name="MonsterHere12" parent="Decorations" unique_id=550534356 instance=ExtResource("9_dt3rr")]
 position = Vector2(3014, 1110)
 
+[node name="Trophy" parent="Decorations" unique_id=1871822218 instance=ExtResource("10_cxe20")]
+position = Vector2(3645, 1057)
+
 [node name="Monsters" type="Node2D" parent="." unique_id=1703639680]
 
 [node name="Jinn" parent="Monsters" unique_id=1666029679 instance=ExtResource("10_o5257")]
@@ -805,7 +810,7 @@ position = Vector2(716, 792)
 position = Vector2(2204, 1783)
 
 [node name="Jinn4" parent="Monsters" unique_id=1243110765 instance=ExtResource("10_o5257")]
-position = Vector2(3441, 1072.0002)
+position = Vector2(3235.9998, 1085)
 
 [node name="Dragon" parent="Monsters" unique_id=428875130 instance=ExtResource("11_2a174")]
 position = Vector2(932.99994, 1593)
@@ -879,7 +884,7 @@ position = Vector2(3459, 1412)
 position = Vector2(2854, 1179)
 
 [node name="Coin16" parent="Coins" unique_id=1054250023 instance=ExtResource("14_glsh0")]
-position = Vector2(3643, 1090)
+position = Vector2(3398, 1104)
 
 [node name="Coin17" parent="Coins" unique_id=1093367403 instance=ExtResource("14_glsh0")]
 position = Vector2(2059, 804)

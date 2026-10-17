@@ -18,6 +18,7 @@ var is_dashing = false
 
 var max_health = 100
 var current_health = 100
+@export var base_damage: int = 1
 signal health_changed(new_health) 
 signal dash_started(duration)
 
@@ -27,7 +28,7 @@ func _ready():
 func _input(event):
 	if is_hurt:
 		return
-	if event.is_action_pressed("jump") and is_on_floor():
+	if event.is_action_pressed("jump") and is_on_floor() and not is_attacking:
 		is_dashing = false
 		velocity.y = JUMP_VELOCITY
 		animated_sprite_2d.play("jump")
@@ -55,7 +56,6 @@ func _physics_process(delta):
 		velocity += get_gravity() * delta
 		
 	var direction = Input.get_axis("run_left", "run_right")
-	var dash = Input.is_action_pressed("dash") 
 	if is_dash_attacking or is_dashing:
 		var facing_dir = -1 if animated_sprite_2d.flip_h else 1
 		velocity.x = facing_dir * DASH_SPEED
@@ -69,7 +69,7 @@ func _physics_process(delta):
 	
 	if not is_dash_attacking and not is_dashing:
 		update_facing_direction(direction)
-		update_animations(direction, dash)
+		update_animations(direction)
 
 func update_facing_direction(direction: float):
 	if direction == 0:
@@ -84,17 +84,17 @@ func update_facing_direction(direction: float):
 	else:
 		animated_sprite_2d.position.x = 0 
 		$Hitbox.position.x = 25.0
-func update_animations(direction: float, dash: bool):
+func update_animations(direction: float):
+	if is_attacking:
+		return
+		
 	if not is_on_floor():
 		if velocity.y < 0.0:
 			animated_sprite_2d.play("jump")
 		elif velocity.y > 0.0:
 			animated_sprite_2d.play("fall")
 	elif direction != 0:
-		if dash:
-			animated_sprite_2d.play("dash") 
-		else:
-			animated_sprite_2d.play("run")
+		animated_sprite_2d.play("run")
 	else:
 		animated_sprite_2d.play("idle")
 
@@ -177,4 +177,5 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 	if not is_attacking:
 		return
 	if body.is_in_group("Enemy") and body.has_method("take_damage"):
-		body.take_damage(1)
+		var current_damage = base_damage * 2 if is_dash_attacking else base_damage
+		body.take_damage(current_damage)

@@ -209,7 +209,6 @@ text = "MAGIC KOBOLD"
 
 [node name="ResumeButton" type="Button" parent="PauseMenu/NinePatchRect/VBoxContainer" unique_id=1305858547]
 custom_minimum_size = Vector2(500, 133)
-custom_maximum_size = Vector2(500, 133)
 layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("6_ao4gj")
@@ -221,7 +220,6 @@ text = "RESUME"
 
 [node name="MainMenuButton" type="Button" parent="PauseMenu/NinePatchRect/VBoxContainer" unique_id=1074978848]
 custom_minimum_size = Vector2(500, 133)
-custom_maximum_size = Vector2(500, 133)
 layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("6_ao4gj")
@@ -291,7 +289,6 @@ text = "GONGRATS !!"
 
 [node name="NextLevelButton" type="Button" parent="LevelComplete/NinePatchRect/VBoxContainer" unique_id=1883844932]
 custom_minimum_size = Vector2(500, 133)
-custom_maximum_size = Vector2(500, 133)
 layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("6_ao4gj")
@@ -303,7 +300,6 @@ text = "NEXT LEVEL"
 
 [node name="MainMenuButton" type="Button" parent="LevelComplete/NinePatchRect/VBoxContainer" unique_id=959784947]
 custom_minimum_size = Vector2(500, 133)
-custom_maximum_size = Vector2(500, 133)
 layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("6_ao4gj")
